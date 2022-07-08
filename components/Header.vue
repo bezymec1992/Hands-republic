@@ -1,0 +1,192 @@
+<template>
+	<header class="header">
+		<div class="container">
+			<strong class="logo">
+				<nuxt-link to="/">HANDS REPUBLIC</nuxt-link>
+			</strong>
+
+			<nav class="main-nav">
+				<ul class="main-menu">
+					<li class="d-xl-none">
+						<strong class="logo">
+							<nuxt-link to="/">HANDS REPUBLIC</nuxt-link>
+						</strong>
+					</li>
+					<li v-for="(item, index) in menu" :key="index">
+						<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
+					</li>
+				</ul>
+			</nav>
+			<a class="open-menu d-xl-none" :class="{ open: menuOpen }" href="#" @click.prevent="toggleMenu">
+				<span></span>
+				<span></span>
+				<span class="visually-hidden">Open Mobile Nav</span>
+			</a>
+		</div>
+	</header>
+</template>
+
+<script>
+export default {
+	name: "Header",
+	data() {
+		return {
+			menuOpen: false,
+			menu: [
+				{
+					title: "Our Company",
+					to: "/"
+				},
+				{
+					title: "Working Together",
+					to: "/"
+				},
+				{
+					title: "Our Brands",
+					to: "/"
+				},
+				{
+					title: "Software",
+					to: "/"
+				},
+				{
+					title: "Careers",
+					to: "/"
+				},
+				{
+					title: "Contact",
+					to: "/"
+				}
+			]
+		};
+	},
+	methods: {
+		toggleMenu() {
+			this.menuOpen = !this.menuOpen;
+
+			if (this.menuOpen) {
+				document.body.classList.add("menu-opened");
+			} else {
+				document.body.classList.remove("menu-opened");
+			}
+		}
+	}
+};
+</script>
+
+<style lang="scss" scoped>
+.header {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	> .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		font-family: $big-shoulders-display;
+		font-size: 4rem;
+		text-transform: uppercase;
+
+		@include media-breakpoint-down(md) {
+			font-size: 3.2rem;
+		}
+	}
+
+	.main-nav {
+		transition: $transition;
+
+		@include media-breakpoint-down(xl) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			padding: 8rem 3rem;
+			background: $white;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			z-index: 99;
+		}
+
+		.menu-opened & {
+			@include media-breakpoint-down(xl) {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+			}
+		}
+
+		.main-menu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 2rem;
+
+			@include media-breakpoint-down(xl) {
+				width: 100%;
+				overflow: auto;
+			}
+
+			@include media-breakpoint-up(xl) {
+				display: flex;
+			}
+
+			li {
+				&:not(:last-child) {
+					margin-right: 4rem;
+				}
+			}
+		}
+	}
+
+	.open-menu {
+		position: relative;
+		width: 3rem;
+		height: 3rem;
+		display: block;
+		font-size: 0;
+		line-height: 0;
+		z-index: 100;
+
+		span {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			border-bottom: 0.3rem solid;
+			height: 0;
+			transition: $transition;
+
+			// .menu-opened & {
+			// 	@include media-breakpoint-down(lg) {
+			// 		color: $white;
+			// 	}
+			// }
+
+			&:nth-child(1) {
+				margin-top: -0.5rem;
+
+				.menu-opened & {
+					margin-top: 0;
+					transform: rotate(45deg);
+				}
+			}
+
+			&:nth-child(2) {
+				margin-top: 0.5rem;
+
+				.menu-opened & {
+					margin-top: 0;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+</style>
