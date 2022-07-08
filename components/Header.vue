@@ -76,8 +76,13 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+	padding-top: 3.2rem;
+	padding-bottom: 3.2rem;
+
+	@include media-breakpoint-down(md) {
+		padding-top: 2.7rem;
+		padding-bottom: 2.7rem;
+	}
 
 	> .container {
 		display: flex;

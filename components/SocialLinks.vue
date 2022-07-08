@@ -74,17 +74,17 @@ export default {
 
 	li {
 		&:not(:last-child) {
-			margin-right: 1.7rem;
+			margin-right: 1.9rem;
 		}
 
 		a {
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			width: 4.6rem;
-			height: 4.6rem;
+			width: 5.3rem;
+			height: 5.3rem;
 			border: 0.1rem solid;
-			border-radius: 1.2rem;
+			border-radius: 50%;
 			color: var(--color);
 
 			&:hover {
