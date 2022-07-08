@@ -71,6 +71,13 @@ export default {
 		padding-bottom: 8rem;
 	}
 
+	.container {
+		@include media-breakpoint-up(xl) {
+			padding-right: 6rem;
+			padding-left: 6rem;
+		}
+	}
+
 	.logo {
 		display: block;
 		margin-bottom: 3.8rem;
@@ -96,7 +103,7 @@ export default {
 	}
 
 	.social-links {
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			margin-bottom: 6.3rem;
 		}
 	}
