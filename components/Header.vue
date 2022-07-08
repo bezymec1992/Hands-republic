@@ -111,7 +111,7 @@ export default {
 			height: 100%;
 			display: flex;
 			flex-direction: column;
-			padding: 8rem 3rem;
+			padding: 12rem 3rem 4rem 3rem;
 			background: $white;
 			opacity: 0;
 			visibility: hidden;
@@ -136,6 +136,11 @@ export default {
 			@include media-breakpoint-down(xl) {
 				width: 100%;
 				overflow: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				flex: 1;
+				font-size: 2.4rem;
 			}
 
 			@include media-breakpoint-up(xl) {
@@ -144,7 +149,13 @@ export default {
 
 			li {
 				&:not(:last-child) {
-					margin-right: 4rem;
+					@include media-breakpoint-up(xl) {
+						margin-right: 4rem;
+					}
+
+					@include media-breakpoint-down(xl) {
+						margin-bottom: 5rem;
+					}
 				}
 			}
 

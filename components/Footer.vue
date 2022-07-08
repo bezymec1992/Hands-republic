@@ -2,14 +2,14 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-lg-6">
 					<strong class="logo">
 						<nuxt-link to="/" class="hover-underline">HANDS REPUBLIC</nuxt-link>
 					</strong>
 					<a href="mailto:hello@handsrepublic.com" class="mailto hover-underline">hello@handsrepublic.com</a>
 					<SocialLinks color="black" hover-color="white" hover-background="black" />
 				</div>
-				<div class="col-md-6">
+				<div class="col-lg-6">
 					<div class="row">
 						<div class="col-6">
 							<ul>
@@ -72,7 +72,7 @@ export default {
 	}
 
 	.logo {
-		display: inline-block;
+		display: block;
 		margin-bottom: 3.8rem;
 		font-family: $big-shoulders-display;
 		font-size: 6rem;
@@ -90,7 +90,14 @@ export default {
 		font-size: 3.2rem;
 
 		@include media-breakpoint-down(md) {
+			margin-bottom: 6rem;
 			font-size: 2.4rem;
+		}
+	}
+
+	.social-links {
+		@include media-breakpoint-down(md) {
+			margin-bottom: 6.3rem;
 		}
 	}
 
