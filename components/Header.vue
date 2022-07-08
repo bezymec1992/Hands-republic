@@ -142,6 +142,38 @@ export default {
 					margin-right: 4rem;
 				}
 			}
+
+			a {
+				position: relative;
+				display: inline-block;
+
+				&:after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					transform: scaleX(0);
+					height: 0;
+					bottom: -0.3rem;
+					left: 0;
+					border-bottom: 0.2rem solid;
+					transform-origin: bottom right;
+					transition: transform 0.25s ease-out;
+				}
+
+				&:hover {
+					&:after {
+						transform: scaleX(1);
+						transform-origin: bottom left;
+					}
+				}
+
+				&.active {
+					&:after {
+						transform: scaleX(1);
+						transform-origin: bottom left;
+					}
+				}
+			}
 		}
 	}
 
