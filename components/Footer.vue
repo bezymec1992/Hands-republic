@@ -49,10 +49,10 @@ export default {
 					{ title: "Our Brands", to: "/" },
 					{ title: "Software", to: "/" },
 					{ title: "Careers", to: "/" },
-					{ title: "Contact", to: "/" }
+					{ title: "Contact", to: "/contact" }
 				],
 				[
-					{ title: "Privacy Policy", to: "/" },
+					{ title: "Privacy Policy", to: "/privacy-policy" },
 					{ title: "Terms and Conditions", to: "/" }
 				]
 			]
@@ -65,6 +65,7 @@ export default {
 .footer {
 	padding-top: 16.4rem;
 	padding-bottom: 12rem;
+	background: $white;
 
 	@include media-breakpoint-down(md) {
 		padding-top: 10rem;

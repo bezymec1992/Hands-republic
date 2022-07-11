@@ -1,5 +1,5 @@
 <template>
-	<div class="input-group" :class="{ focus: labelShow }">
+	<div class="input-group" :class="[{ focus: labelShow }, { error: errorShowing }]">
 		<label v-if="inputType === 'input'">
 			<transition name="fade">
 				<span v-if="(label && labelShow) || value.length > 0" class="label">{{ label }}</span>
@@ -184,6 +184,12 @@ export default {
 	&.focus {
 		.label {
 			color: $black;
+		}
+	}
+
+	&.error {
+		.form-control {
+			border-color: $red;
 		}
 	}
 }

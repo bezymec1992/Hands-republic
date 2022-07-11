@@ -7,6 +7,7 @@
 			</main>
 			<Footer />
 			<Cookies />
+			<GoTopBtn />
 		</div>
 	</transition>
 </template>
@@ -16,12 +17,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import globalBreakpoints from "@/mixins/globalBreakpoints";
 import Cookies from "@/components/Cookies";
+import GoTopBtn from "@/components/GoTopBtn";
 
 export default {
 	components: {
 		Header,
 		Footer,
-		Cookies
+		Cookies,
+		GoTopBtn
 	},
 	mixins: [globalBreakpoints]
 };
