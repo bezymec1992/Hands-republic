@@ -19,6 +19,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="section-labels-card">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div v-for="(item, index) in labelsList" :key="index" class="col-md-6 col-lg-5 col-xl-4">
+						<LabelCard :card="item" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<QuoteSection text="To see all the cross-functional teaming that has led to developing exceptional team.blue products and enduring relationships makes me extremely proud." name="Jacob Nijholt" position="Chief Product Owner" img="img-01.jpg" img-mob="img-01.jpg" />
 		<ContactSection />
 	</div>
 </template>
@@ -26,11 +36,24 @@
 <script>
 import ContactSection from "@/components/ContactSection";
 import Button from "@/components/Button";
+import LabelCard from "@/components/LabelCard";
+import Labels from "@/constants/labels";
+import QuoteSection from "@/components/QuoteSection";
 
 export default {
 	components: {
 		ContactSection,
-		Button
+		Button,
+		LabelCard,
+		QuoteSection
+	},
+	data() {
+		return {
+			labelsList: []
+		};
+	},
+	created() {
+		this.labelsList = Labels;
 	}
 };
 </script>
@@ -61,6 +84,22 @@ export default {
 					@include media-breakpoint-up(lg) {
 						margin-bottom: 6rem;
 					}
+				}
+			}
+		}
+	}
+
+	.section-labels-card {
+		padding-bottom: 6rem;
+
+		@include media-breakpoint-down(md) {
+			padding-bottom: 4rem;
+		}
+
+		div[class^="col-"] {
+			&:nth-child(2) {
+				@include media-breakpoint-up(xl) {
+					padding-top: 4rem;
 				}
 			}
 		}
