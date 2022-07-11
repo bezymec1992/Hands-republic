@@ -1,36 +1,69 @@
 <template>
 	<div class="home-page">
-		<div class="container">home page</div>
+		<div class="text-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<h2 class="h2">Your business and our Hands Republic</h2>
+					</div>
+					<div class="col-lg-6">
+						<div class="text-holder d-none d-md-block">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="text-holder d-md-none">
+							<p>We champion small businesses in the digital world and have over 1,700 localised experts to help you spread your reach.</p>
+						</div>
+						<Button title="Our company" class="btn-dark d-md-none" :has-icon="true" type="button" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<ContactSection />
 	</div>
 </template>
 
 <script>
+import ContactSection from "@/components/ContactSection";
+import Button from "@/components/Button";
+
 export default {
-	mounted() {
-		this.test();
-	},
-	methods: {
-		test() {
-			// const array = ["1", "2", 3];
-
-			// const cat = {
-			// 	name: "Борис",
-			// 	color: "red",
-			// 	age: 8
-			// };
-
-			// for (const key in cat) {
-			// 	console.log(`${key} – ${cat[key]}`);
-			// }
-
-			(function () {
-				console.log("ss");
-			})();
-
-			// for (const el in array) {
-			// 	console.log(el);
-			// }
-		}
+	components: {
+		ContactSection,
+		Button
 	}
 };
 </script>
+
+<style lang="scss" scoped>
+.home-page {
+	.text-section {
+		padding-top: 22.6rem;
+		padding-bottom: 22.5rem;
+
+		.h2 {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 3.2rem;
+			}
+		}
+
+		.text-holder {
+			font-size: 2.4rem;
+			line-height: 1.7;
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 3.2rem;
+				font-size: 2rem;
+			}
+
+			p {
+				&:not(:last-child) {
+					@include media-breakpoint-up(lg) {
+						margin-bottom: 6rem;
+					}
+				}
+			}
+		}
+	}
+}
+</style>
