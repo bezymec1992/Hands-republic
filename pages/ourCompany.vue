@@ -1,9 +1,26 @@
 <template>
     <div>
         <main-slot>
-
+            <template>
+                <div class=" flex-column-reverse flex-lg-row row">
+                    <div class="intro__title-wrapp col-12 col-lg-8">
+                        <h1 class="h1 intro__title">
+                            Growing your business
+                        </h1>
+                        <Button title="Work together" class="btn-dark" :has-icon="true" type="button" />
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="intro-img">
+                            <picture >
+                                <source srcset="@/assets/imgs/ma.png" media="(max-width: 991px)">
+                                <img src="@/assets/imgs/mm.png" alt="MDN">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </template>
         </main-slot>
-        
+
         <InfoWrapper :title="info.title" :text1="info.text1" :text2="info.text2" :span1="info.span1" :span2="info.span2" :img="info.img" :imgMob="info.imgMob"/>
 
         <div class="core">
@@ -23,10 +40,7 @@
         <div class="hands">
             <div class="container">
                 <div class="hands__wrapper">
-                    <select name="cars" id="cars" class="select">
-                        <option value="volvo">Select hands you need...</option>
-                        <option value="volvso">Select hands you need...</option>
-                    </select>
+                    <CustomSelect :options="['Frederike Brouwer', 'Hülya Zobuoglu']" :default="'Kiezen'" class="select" @input="inputChoose($event)" />
                 </div>
             </div>
         </div>
@@ -66,12 +80,14 @@ import MainSlot from "@/components/MainSlot";
 import InfoWrapper from "@/components/InfoWrapper";
 import QuoteSection from "@/components/QuoteSection";
 import Card from "@/components/Card";
+import CustomSelect from "@/components/CustomSelect";
 
 
 export default {
     components: {
         MainSlot,
         InfoWrapper,
+        CustomSelect,
         QuoteSection,
 		Card
 	},
@@ -138,6 +154,45 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .intro-section {
+        background: #E5CE5F;
+        position: relative;
+        overflow: hidden;
+        @include media-breakpoint-down(lg) {
+            background: #F9ECA2;
+        }
+    
+    .intro-img {
+        @include media-breakpoint-up(lg){
+            position: absolute;
+            height: 100%;
+            width: 110rem;
+            right: 5%;
+            bottom: 0;
+        }
+
+        @include media-breakpoint-down(lg){
+            margin-left: -2rem;
+            margin-right: -2rem;
+        }
+        &::before {
+            @include media-breakpoint-up(lg) {
+                content: "";
+                position: absolute;
+                right: -0.2rem;
+                bottom: 0;
+                width: 18rem;
+                height: 100%;
+                background: linear-gradient(270deg, #e5ce5f 0%, rgba(229, 206, 95, 0) 100%);
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    }
     .hands {
         padding-bottom: 100px;
         .hands__wrapper {
@@ -147,42 +202,17 @@ export default {
         background-size: cover;
         position: relative;
         margin: 0 auto;
-         @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(md) {
             background: url("@/assets/imgs/hands-mb.png") no-repeat center;
             min-height: 350px;
 
-         }
-        .select {
-            position: absolute;
-            top: 52%;
-            left: 52%;
-            transform: translate(-52%, -50%);
-            width: 910px;
-            max-width: 100%;
-            height: 80px;
-            opacity: 0.3;
-            border: 1px solid #000000;
-            
-            
-
-            font-size: 30px;
-            line-height: 41px;
-            opacity: 0.5;
-            padding: 0 40px;
-            @include media-breakpoint-down(md) {
-                width: 450px;
-                height: 40px;
-                font-size: 16px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
         }
+        
     }
     }
     .core {
         max-width: 1200px;
-        padding: 70px 0;
+        padding: 0 0 70px;
         margin: 0 auto;
         .core__title {
             text-align: center;
