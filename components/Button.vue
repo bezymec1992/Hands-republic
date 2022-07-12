@@ -1,20 +1,44 @@
 <template>
   <nuxt-link v-if="type === 'nuxt-link'" :to="to" class="btn">
     <span v-if="title" class="title">{{ title }}</span>
-    <span v-if="hasIconSlot" class="icon-holder">
-      <slot name="icon" />
+    <span v-if="hasIcon" class="icon-holder">
+      <slot name="icon">
+        <svg
+          width="21"
+          height="16"
+          viewBox="0 0 21 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.4445 8.72184C20.8432 8.32318 20.8432 7.67682 20.4445 7.27816L13.948 0.781619C13.5493 0.382959 12.9029 0.382959 12.5043 0.781619C12.1056 1.18028 12.1056 1.82663 12.5043 2.2253L18.279 8L12.5043 13.7747C12.1056 14.1734 12.1056 14.8197 12.5043 15.2184C12.9029 15.617 13.5493 15.617 13.948 15.2184L20.4445 8.72184ZM0.972656 9.02083H19.7227V6.97917H0.972656V9.02083Z"
+            fill="currentColor"
+          />
+        </svg>
+      </slot>
     </span>
   </nuxt-link>
   <a v-else-if="type === 'link'" :href="href" target="_blank" class="btn">
     <span v-if="title" class="title">{{ title }}</span>
-
-    <span v-if="hasIconSlot" class="icon-holder">
-      <slot name="icon" />
+    <span v-if="hasIcon" class="icon-holder">
+      <slot name="icon">
+        <svg
+          width="21"
+          height="16"
+          viewBox="0 0 21 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.4445 8.72184C20.8432 8.32318 20.8432 7.67682 20.4445 7.27816L13.948 0.781619C13.5493 0.382959 12.9029 0.382959 12.5043 0.781619C12.1056 1.18028 12.1056 1.82663 12.5043 2.2253L18.279 8L12.5043 13.7747C12.1056 14.1734 12.1056 14.8197 12.5043 15.2184C12.9029 15.617 13.5493 15.617 13.948 15.2184L20.4445 8.72184ZM0.972656 9.02083H19.7227V6.97917H0.972656V9.02083Z"
+            fill="currentColor"
+          />
+        </svg>
+      </slot>
     </span>
   </a>
   <button v-else-if="type === 'button'" class="btn" @click="click">
     <span v-if="title" class="title">{{ title }}</span>
-
     <span v-if="hasIcon" class="icon-holder">
       <slot name="icon">
         <svg
@@ -45,7 +69,7 @@ export default {
     },
     title: {
       type: String,
-      default: "title",
+      default: "",
       require: false,
     },
     to: {
