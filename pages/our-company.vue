@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<main-slot>
-			<template slot>
+			<div class="container">
 				<div class="flex-column-reverse flex-lg-row row">
 					<div class="intro__title-wrapp col-12 col-lg-8">
 						<h1 class="h1 intro__title">Growing your business</h1>
@@ -16,7 +16,7 @@
 						</div>
 					</div>
 				</div>
-			</template>
+			</div>
 		</main-slot>
 
 		<InfoWrapper :title="info.title" :text1="info.text1" :text2="info.text2" :span1="info.span1" :span2="info.span2" :img="info.img" :imgMob="info.imgMob" />
