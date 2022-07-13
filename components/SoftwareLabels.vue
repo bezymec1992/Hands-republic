@@ -1,8 +1,8 @@
 <template>
   <div class="software-labels">
-    <ul class="row software-labels__list list-unstyled mb-0">
+    <ul class="row g-0 software-labels__list list-unstyled mb-0">
       <li
-        class="col-12 d-flex col-md-6 col-xxl-3 software-labels__content-holder"
+        class="col-12 d-flex col-md-6 col-xl-3 software-labels__content-holder"
       >
         <div class="software-labels__icon-holder">
           <picture>
@@ -25,7 +25,7 @@
         </div>
       </li>
       <li
-        class="col-12 d-flex col-md-6 col-xxl-3 software-labels__content-holder"
+        class="col-12 d-flex col-md-6 col-xl-3 software-labels__content-holder"
       >
         <div class="software-labels__icon-holder">
           <picture>
@@ -48,7 +48,7 @@
         </div>
       </li>
       <li
-        class="col-12 d-flex col-md-6 col-xxl-3 software-labels__content-holder"
+        class="col-12 d-flex col-md-6 col-xl-3 software-labels__content-holder"
       >
         <div class="software-labels__icon-holder">
           <picture>
@@ -71,7 +71,7 @@
         </div>
       </li>
       <li
-        class="col-12 d-flex col-md-6 col-xxl-3 software-labels__content-holder"
+        class="col-12 d-flex col-md-6 col-xl-3 software-labels__content-holder"
       >
         <div class="software-labels__icon-holder">
           <picture>
@@ -95,9 +95,9 @@
       </li>
     </ul>
 
-    <ul class="row d-lg-flex justify-content-between list-unstyled mb-0">
+    <ul class="row g-0 d-lg-flex justify-content-between list-unstyled mb-0">
       <li
-        class="col-12 d-flex col-md-6 col-xxl-3 software-labels__content-holder"
+        class="col-12 d-flex col-md-6 col-xl-3 software-labels__content-holder"
       >
         <div class="software-labels__icon-holder">
           <picture>
@@ -120,7 +120,7 @@
         </div>
       </li>
       <li
-        class="col-12 d-flex col-md-6 col-xxl-3 software-labels__content-holder"
+        class="col-12 d-flex col-md-6 col-xl-3 software-labels__content-holder"
       >
         <div class="software-labels__icon-holder">
           <picture>
@@ -143,7 +143,7 @@
         </div>
       </li>
       <li
-        class="col-12 d-flex col-md-6 col-xxl-3 software-labels__content-holder"
+        class="col-12 d-flex col-md-6 col-xl-3 software-labels__content-holder"
       >
         <div class="software-labels__icon-holder">
           <picture>
@@ -166,7 +166,7 @@
         </div>
       </li>
       <li
-        class="col-12 d-flex col-md-6 col-xxl-3 software-labels__content-holder"
+        class="col-12 d-flex col-md-6 col-xl-3 software-labels__content-holder"
       >
         <div class="software-labels__icon-holder">
           <picture>
@@ -200,14 +200,6 @@ export default {
 
 <style lang="scss" scoped>
 .software-labels {
-  padding-top: 8.481rem;
-  // padding-bottom: 9.7rem;
-  @include media-breakpoint-up(md) {
-    padding-top: 17.3rem;
-  }
-  .container {
-    padding-left: 6rem;
-  }
   &__list {
     @include media-breakpoint-up(md) {
       // margin-bottom: 3.5rem;
@@ -234,7 +226,7 @@ export default {
   &__title {
     font-size: 3.2rem;
     line-height: 1.857;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xxl) {
       font-size: 4rem;
       line-height: 1.5;
     }
