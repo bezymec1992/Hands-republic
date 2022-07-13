@@ -73,6 +73,8 @@
             </div>
         </div>
 
+        <contact-section/>
+
     </div>
 </template>
 <script>
@@ -81,6 +83,7 @@ import InfoWrapper from "@/components/InfoWrapper";
 import QuoteSection from "@/components/QuoteSection";
 import Card from "@/components/Card";
 import CustomSelect from "@/components/CustomSelect";
+import ContactSection from "@/components/ContactSection";
 
 
 export default {
@@ -89,7 +92,8 @@ export default {
         InfoWrapper,
         CustomSelect,
         QuoteSection,
-		Card
+		Card,
+        ContactSection
 	},
      data() {
 		return {

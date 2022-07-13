@@ -78,7 +78,8 @@ export default {
 .header {
 	padding-top: 3.2rem;
 	padding-bottom: 3.2rem;
-	background: $white;
+	// background: $white;
+	background: transparent;
 
 	@include media-breakpoint-down(md) {
 		padding-top: 2.7rem;
