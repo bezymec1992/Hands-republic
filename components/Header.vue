@@ -35,7 +35,7 @@ export default {
 			menu: [
 				{
 					title: "Our Company",
-					to: "/"
+					to: "/our-company"
 				},
 				{
 					title: "Working Together",

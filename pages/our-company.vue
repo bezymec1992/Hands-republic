@@ -36,7 +36,7 @@
 		<div class="hands">
 			<div class="container">
 				<div class="hands__wrapper">
-					<CustomSelect :options="['Frederike Brouwer', 'Hülya Zobuoglu']" :default="'Kiezen'" class="select" />
+					<CustomSelect :options="['Frederike Brouwer', 'Hülya Zobuoglu']" default="Select hands you need..." class="select" />
 				</div>
 			</div>
 		</div>
@@ -200,6 +200,20 @@ export default {
 		@include media-breakpoint-down(md) {
 			background: url("@/assets/imgs/hands-mb.png") no-repeat center;
 			min-height: 350px;
+		}
+	}
+
+	.custom-select {
+		position: absolute;
+		top: 52%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 910px;
+		max-width: 100%;
+
+		@include media-breakpoint-down(md) {
+			width: 410px;
+			top: 50%;
 		}
 	}
 }
