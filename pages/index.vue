@@ -19,6 +19,8 @@
 			</div>
 		</main-slot>
 
+		<Stand class="style2" title1="Super charging" title2="business performance" btn-title="About us" btn-to="/" text="We champion small businesses in the digital world and have over 1,700 localised experts to help you spread your reach." />
+
 		<Marquee>
 			OUR <span>HANDS</span> <br class="d-md-none" />
 			ARE EVERYWHERE
@@ -64,6 +66,7 @@ import LabelCard from "@/components/LabelCard";
 import Labels from "@/constants/labels";
 import QuoteSection from "@/components/QuoteSection";
 import Marquee from "@/components/Marquee";
+import Stand from "@/components/Stand";
 
 export default {
 	components: {
@@ -72,7 +75,8 @@ export default {
 		LabelCard,
 		QuoteSection,
 		MainSlot,
-		Marquee
+		Marquee,
+		Stand
 	},
 	data() {
 		return {

@@ -37,6 +37,7 @@ import MainSlot from "@/components/MainSlot";
 import LabelCard from "@/components/LabelCard";
 import Labels from "@/constants/labels";
 import ContactSection from "@/components/ContactSection";
+
 export default {
 	components: {
 		MainSlot,

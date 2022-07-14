@@ -70,7 +70,7 @@ export default {
 
 <style lang="scss" scoped>
 .btn {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	padding: 0;
 	font-size: 2rem;
