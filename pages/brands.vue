@@ -86,7 +86,7 @@
         .intro-img {
             position: absolute;
             overflow: hidden;
-            top: 0;
+            top: -2rem;
             right: 0;
             z-index: -1;
         }
