@@ -2,56 +2,55 @@
   <div class="software-page">
     <!-- Software header section -->
 
-    <section class="software-header">
-      <div class="row flex-sm-row-reverse">
-        <div class="col-12 col-sm-6">
-          <div class="software-header__img-holder">
-            <img
-              class="software-header__img"
-              src="../assets/images/img-0002.png"
-              alt="header image"
-            />
+    <div class="software-header">
+      <div class="container">
+        <div class="row g-0 flex-sm-row-reverse">
+          <div class="col-12 col-sm-6">
+            <div class="software-header__img-holder">
+              <img
+                class="software-header__img"
+                src="../assets/images/img-0002.png"
+                alt="header image"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 software-header__wrapper">
+            <h1 class="software-header__title h1 text-uppercase">
+              Software <br />
+              hands republic
+            </h1>
+            <Button
+              title="Work together"
+              class="btn btn-dark software-header__btn"
+              type="nuxt-link"
+              to="/contact"
+              :has-icon="true"
+            >
+            </Button>
           </div>
         </div>
-        <div class="col-12 col-sm-6 software-header__wrapper">
-          <h1 class="software-header__title h1 text-uppercase">
-            Software <br />
-            hands republic
-          </h1>
-          <Button
-            title="Work together"
-            class="software-header__btn"
-            type="nuxt-link"
-            to="/contact"
-            :has-icon="true"
-          >
-          </Button>
-        </div>
       </div>
-    </section>
+    </div>
 
     <!-- Software functionalities section -->
 
     <section class="functionalities">
-      <div class="row">
-        <div class="col-12 col-md-6 functionalities__text-holder">
-          <h2 class="h2 functionalities__title text-uppercase">
-            multipule <br />
-            functionalities <br />
-            at one place
-          </h2>
-        </div>
-        <div class="col-12 col-md-6">
-          <img
-            class="functionalities__img d-md-none"
-            src="../assets/images/img-0003.png"
-            alt="image description"
-          />
-          <img
-            class="functionalities__img d-none d-md-flex"
-            src="../assets/images/img-0004.png"
-            alt="image description"
-          />
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-12 col-md-6 functionalities__text-holder">
+            <h2 class="h2 functionalities__title text-uppercase">
+              multipule <br />
+              functionalities <br />
+              at one place
+            </h2>
+          </div>
+          <div class="col-12 col-md-6">
+            <img
+              class="functionalities__img position-relative"
+              src="../assets/images/img-0004.png"
+              alt="image description"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -109,36 +108,36 @@
     <!-- Flexible-remote section -->
 
     <section class="flexible-remote">
-      <div class="row">
-        <div class="col-12 col-sm-6 p-0">
-          <img
-            class="flexible-remote__img d-md-none"
-            src="../assets/images/img-0007.png"
-            alt="image description"
-          />
-          <img
-            class="flexible-remote__img d-none d-md-flex"
-            src="../assets/images/img-0008.png"
-            alt="image description"
-          />
-        </div>
-        <div class="col-12 col-sm-6 d-flex align-items-center">
-          <div class="flexible-remote__wrapper">
-            <h2 class="flexible-remote__title h2 text-uppercase">
-              flexible and <br />
-              remote
-            </h2>
-            <div class="flexible-remote__text-holder">
-              <p class="flexible-remote__text">
-                Select your available periods and work where you want
-              </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 p-0">
+            <img
+              class="flexible-remote__img d-md-none"
+              src="../assets/images/img-0007.png"
+              alt="image description"
+            />
+            <img
+              class="flexible-remote__img d-none d-md-flex"
+              src="../assets/images/img-0008.png"
+              alt="image description"
+            />
+          </div>
+          <div class="col-12 col-sm-6 d-flex align-items-center">
+            <div class="flexible-remote__wrapper">
+              <h2 class="flexible-remote__title h2 text-uppercase">
+                flexible and <br />
+                remote
+              </h2>
+              <div class="flexible-remote__text-holder">
+                <p class="flexible-remote__text">
+                  Select your available periods and work where you want
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Join the future section -->
 
     <!-- Dashboard section -->
 
@@ -195,7 +194,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-6 manage__img-holder">
+          <div class="col-12 col-md-6 d-flex align-items-center">
             <img
               class="manage__img d-none d-md-flex"
               src="../assets/images/img-00012.png"
@@ -253,30 +252,34 @@
     <!-- Join the future section -->
 
     <section class="join-future">
-      <div class="row">
-        <div class="col-12 col-sm-6 p-0">
-          <img
-            class="join-future__img d-md-none"
-            src="../assets/images/img-00015.jpg"
-            alt="image description"
-          />
-          <img
-            class="join-future__img d-none d-md-flex"
-            src="../assets/images/img-00016.jpg"
-            alt="image description"
-          />
-        </div>
-        <div class="col-12 col-sm-6 d-flex align-items-center px-0">
-          <div class="join-future__wrapper">
-            <h2 class="join-future__title h2 text-uppercase d-md-none">
-              Join the future <br />
-              right now
-            </h2>
-            <h2 class="join-future__title h2 text-uppercase d-none d-md-block">
-              Join the <br />
-              future right <br />
-              now
-            </h2>
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-12 col-sm-6">
+            <img
+              class="join-future__img d-md-none"
+              src="../assets/images/img-00015.jpg"
+              alt="image description"
+            />
+            <img
+              class="join-future__img d-none d-md-flex"
+              src="../assets/images/img-00016.jpg"
+              alt="image description"
+            />
+          </div>
+          <div class="col-12 col-sm-6 d-flex align-items-center">
+            <div class="join-future__wrapper">
+              <h2 class="join-future__title h2 text-uppercase d-md-none">
+                Join the future <br />
+                right now
+              </h2>
+              <h2
+                class="join-future__title h2 text-uppercase d-none d-md-block"
+              >
+                Join the <br />
+                future right <br />
+                now
+              </h2>
+            </div>
           </div>
         </div>
       </div>
@@ -354,14 +357,11 @@ export default {
 
     &__wrapper {
       padding-top: 1.8rem;
-      padding-left: 2rem;
-      padding-bottom: 6.798rem;
+      padding-bottom: 6.8rem;
+
       @include media-breakpoint-up(md) {
+        padding: 0;
         margin: auto 0;
-        padding-left: 8rem;
-      }
-      @include media-breakpoint-up(xl) {
-        padding-left: 8rem;
       }
     }
     &__title {
@@ -375,51 +375,37 @@ export default {
         margin-bottom: 5.1rem;
       }
     }
-    // &__btn {
-    //   border: 0.1rem solid $black;
-    //   width: 22rem;
-    //   height: 6.2rem;
-    //   border-radius: 3.6rem;
-    // }
+    .btn {
+      max-width: 25rem;
+      @include media-breakpoint-up(md) {
+        max-width: 30rem;
+      }
+    }
   }
 
   // Functionalities section
 
   .functionalities {
-    .container {
-      @include media-breakpoint-up(md) {
-        padding-left: 8rem;
-        padding-right: 8rem;
-      }
+    overflow: hidden;
+    padding-top: 6.8rem;
+    @include media-breakpoint-up(md) {
+      padding-top: 12.2rem;
     }
     &__text-holder {
-      padding-top: 6.8rem;
       padding-bottom: 4rem;
       padding-left: 2rem;
       @include media-breakpoint-up(md) {
-        padding-left: 8rem;
         margin: auto 0;
+        padding-bottom: 0;
+        padding-left: 0;
       }
     }
     &__title {
       font-size: 5rem;
       line-height: 1.2;
 
-      // @include media-breakpoint-up(lg) {
-      //   font-size: 8rem;
-      //   line-height: 1.1;
-      // }
       @include media-breakpoint-up(xl) {
         font-size: 10rem;
-      }
-    }
-    &__img {
-      width: 100%;
-      height: auto;
-      padding-left: 2rem;
-
-      @include media-breakpoint-up(md) {
-        padding-top: 6.8rem;
       }
     }
   }
@@ -427,9 +413,15 @@ export default {
   // Labels section
 
   .labels {
+    padding-top: 8.481rem;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 17.3rem;
+    }
+
     .container {
       @include media-breakpoint-up(md) {
-        padding-left: 4rem;
+        // padding-left: 4rem;
         // padding-right: 8rem;
       }
     }
@@ -574,17 +566,10 @@ export default {
         margin-bottom: 2.8rem;
       }
     }
-    &__img-holder {
-      margin: auto 0;
-    }
+
     &__img {
       width: 100%;
       height: auto;
-      margin-bottom: 3.2rem;
-
-      @include media-breakpoint-up(md) {
-        // margin-bottom: 0;
-      }
     }
   }
 
@@ -624,12 +609,14 @@ export default {
         line-height: 1.83;
       }
     }
-    &__img-holder {
-      margin: auto 0;
-    }
+
     &__img {
       width: 100%;
       height: auto;
+      margin-bottom: 3.2rem;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -641,23 +628,12 @@ export default {
     @include media-breakpoint-up(lg) {
       padding-top: 16rem;
     }
-    .container {
-      @include media-breakpoint-up(md) {
-        // padding-left: 8rem;
-        // padding-right: 8rem;
-      }
-    }
-    &__body {
-      @include media-breakpoint-up(md) {
-        padding-left: 8rem;
-      }
-    }
     &__title {
       font-size: 5rem;
       line-height: 1;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.6rem;
       @include media-breakpoint-up(md) {
-        margin-bottom: 2.8rem;
+        margin-bottom: 3.5rem;
       }
 
       @include media-breakpoint-up(xl) {
@@ -669,10 +645,15 @@ export default {
       font-size: 2rem;
       line-height: 1.6;
       margin-bottom: 0.8rem;
+      max-width: 35rem;
 
+      @include media-breakpoint-up(lg) {
+        max-width: 53rem;
+      }
       @include media-breakpoint-up(lg) {
         font-size: 2.4rem;
         line-height: 1.83;
+        margin-bottom: 0;
       }
     }
     &__img {

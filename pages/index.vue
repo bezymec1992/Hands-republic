@@ -1,5 +1,28 @@
 <template>
 	<div class="home-page">
+		<main-slot>
+			<div class="container">
+				<div class="intro-main flex-column-reverse flex-lg-row row">
+					<div class="intro__title-wrapp col-12 col-lg-6">
+						<h1 class="h1 intro__title">Be with people who share your passion</h1>
+						<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="button" />
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="intro-img">
+							<picture>
+								<source srcset="@/assets/images/img-02.png" media="(min-width: 768px)" />
+								<img src="@/assets/images/img-03.png" alt="Be with people who share your passion" />
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main-slot>
+
+		<Marquee>
+			OUR <span>HANDS</span> <br class="d-md-none" />
+			ARE EVERYWHERE
+		</Marquee>
 		<div class="text-section">
 			<div class="container">
 				<div class="row">
@@ -34,18 +57,22 @@
 </template>
 
 <script>
+import MainSlot from "@/components/MainSlot";
 import ContactSection from "@/components/ContactSection";
 import Button from "@/components/Button";
 import LabelCard from "@/components/LabelCard";
 import Labels from "@/constants/labels";
 import QuoteSection from "@/components/QuoteSection";
+import Marquee from "@/components/Marquee";
 
 export default {
 	components: {
 		ContactSection,
 		Button,
 		LabelCard,
-		QuoteSection
+		QuoteSection,
+		MainSlot,
+		Marquee
 	},
 	data() {
 		return {
@@ -54,12 +81,81 @@ export default {
 	},
 	created() {
 		this.labelsList = Labels;
+	},
+	head() {
+		return {
+			bodyAttrs: {
+				class: "header-absolute"
+			}
+		};
 	}
 };
 </script>
 
 <style lang="scss" scoped>
 .home-page {
+	overflow: hidden;
+
+	.intro-section {
+		padding-bottom: 15rem;
+
+		@include media-breakpoint-down(lg) {
+			padding-bottom: 5rem;
+		}
+
+		.container {
+			position: relative;
+		}
+
+		.intro__title-wrapp {
+			position: relative;
+			margin-top: 22rem;
+			z-index: 3;
+
+			&::before {
+				@include media-breakpoint-up(lg) {
+					content: "";
+					position: absolute;
+					left: -5rem;
+					top: -5rem;
+					width: 32rem;
+					height: 32rem;
+					background: #ffeeee;
+					border-radius: 50%;
+					z-index: -1;
+				}
+			}
+
+			@include media-breakpoint-down(lg) {
+				padding-top: 38rem;
+				margin-top: 0;
+			}
+		}
+
+		.intro-img {
+			position: absolute;
+			overflow: hidden;
+			top: -6rem;
+			right: -10rem;
+			width: 82rem;
+
+			@include media-breakpoint-down(md) {
+				top: -6.5rem;
+				right: 0rem;
+				width: 64rem;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+
+			@include media-breakpoint-down(md) {
+				width: 110%;
+			}
+		}
+	}
+
 	.text-section {
 		padding-top: 22.6rem;
 		padding-bottom: 22.5rem;
