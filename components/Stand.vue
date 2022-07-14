@@ -15,7 +15,7 @@
 					<h2 class="h2 stand__title2">
 						{{ title2 }}
 					</h2>
-					<Button v-if="btnTitle" :title="btnTitle" class="btn-dark" :has-icon="true" type="nuxt-link" :to="btnTo" />
+					<Button v-if="btn.title" :title="btn.title" class="btn-dark" :has-icon="true" type="nuxt-link" :to="btn.to" />
 				</div>
 			</div>
 			<div v-if="text" class="stand__text-holder">
@@ -47,15 +47,10 @@ export default {
 			type: String,
 			default: "career-stand-mb.png"
 		},
-		btnTitle: {
-			type: String,
-			default: "",
-			require: false
-		},
-		btnTo: {
-			type: String,
-			default: "/",
-			require: false
+
+		btn: {
+			type: Object,
+			default: () => ({})
 		},
 		text: {
 			type: String,

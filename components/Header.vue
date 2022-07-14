@@ -39,7 +39,7 @@ export default {
 				},
 				{
 					title: "Working Together",
-					to: "/"
+					to: "/working-together"
 				},
 				{
 					title: "Our Brands",
@@ -51,7 +51,7 @@ export default {
 				},
 				{
 					title: "Careers",
-					to: "/"
+					to: "/careers"
 				},
 				{
 					title: "Contact",

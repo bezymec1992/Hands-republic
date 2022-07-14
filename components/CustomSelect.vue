@@ -1,7 +1,7 @@
 <template>
 	<div class="custom-select" :tabindex="tabindex" @blur="open = false">
 		<div class="selected" :class="{ open: open }" @click="open = !open">
-			{{ selected }}
+			{{ !selected.title ? this.default : selected.title }}
 		</div>
 		<div class="items" :class="{ selectHide: !open }" @click="clicked">
 			<div
@@ -10,10 +10,9 @@
 				@click="
 					selected = option;
 					open = false;
-					$emit('click', option);
 				"
 			>
-				{{ option }}
+				{{ option.title }}
 			</div>
 		</div>
 	</div>
@@ -50,7 +49,7 @@ export default {
 	methods: {
 		clicked() {
 			this.$emit("click", this.selected);
-			console.log(this.selected);
+			// console.log(this.selected);
 		}
 	}
 };
@@ -118,7 +117,7 @@ export default {
 }
 
 .custom-select .items div {
-	padding: 20px;
+	padding: 20px 40px;
 	color: black;
 	cursor: pointer;
 	user-select: none;
