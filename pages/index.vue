@@ -18,13 +18,26 @@
 				</div>
 			</div>
 		</main-slot>
-
 		<Stand class="style2" title1="Super charging" title2="business performance" btn-title="About us" btn-to="/" text="We champion small businesses in the digital world and have over 1,700 localised experts to help you spread your reach." />
-
 		<Marquee>
 			OUR <span>HANDS</span> <br class="d-md-none" />
 			ARE EVERYWHERE
 		</Marquee>
+		<div class="visual-section">
+			<div class="container">
+				<div class="row align-items-md-center">
+					<div class="col-md-6">
+						<div class="img-holder">
+							<img src="@/assets/images/img-04.jpg" alt="It’s all about TEAMING" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h2 class="h2">It’s all about TEAMING</h2>
+						<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="button" />
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="text-section">
 			<div class="container">
 				<div class="row">
@@ -164,6 +177,11 @@ export default {
 		padding-top: 22.6rem;
 		padding-bottom: 22.5rem;
 
+		@include media-breakpoint-down(md) {
+			padding-top: 10rem;
+			padding-bottom: 12rem;
+		}
+
 		.h2 {
 			@include media-breakpoint-down(lg) {
 				margin-bottom: 3.2rem;
@@ -201,6 +219,40 @@ export default {
 				@include media-breakpoint-up(xl) {
 					padding-top: 4rem;
 				}
+			}
+		}
+	}
+
+	.visual-section {
+		.container {
+			max-width: 144rem;
+		}
+
+		.row {
+			@include media-breakpoint-up(lg) {
+				@include grid-gutter(8rem);
+			}
+		}
+
+		.h2 {
+			margin-bottom: 5rem;
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 3.2rem;
+			}
+		}
+
+		.img-holder {
+			margin-left: -2.4rem;
+
+			@include media-breakpoint-down(md) {
+				margin-right: -2.4rem;
+				margin-bottom: 3.3rem;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
 			}
 		}
 	}
