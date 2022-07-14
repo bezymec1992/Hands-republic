@@ -4,7 +4,7 @@
 
     <div class="software-header">
       <div class="container">
-        <div class="row g-0 flex-sm-row-reverse">
+        <div class="row g-0 flex-sm-row-reverse software-header__inner">
           <div class="col-12 col-sm-6">
             <div class="software-header__img-holder">
               <img
@@ -14,7 +14,9 @@
               />
             </div>
           </div>
-          <div class="col-12 col-sm-6 software-header__wrapper">
+          <div
+            class="col-12 col-sm-6 d-flex flex-column software-header__wrapper"
+          >
             <h1 class="software-header__title h1 text-uppercase">
               Software <br />
               hands republic
@@ -314,8 +316,22 @@ export default {
   // Header section
 
   .software-header {
-    background-color: $mauve;
-
+    .container {
+      padding: 0;
+      max-width: 144rem;
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+    }
+    &__inner {
+      background-color: $mauve;
+      @include media-breakpoint-up(sm) {
+        padding-left: 2rem;
+      }
+      @media (min-width: 1320px) {
+        padding-left: calc((100vw - 132rem));
+      }
+    }
     &__img-holder {
       position: relative;
       padding-top: 98.7%;
@@ -358,9 +374,11 @@ export default {
     &__wrapper {
       padding-top: 1.8rem;
       padding-bottom: 6.8rem;
+      // padding-left: 2rem;
+      // padding-right: 2rem;
 
       @include media-breakpoint-up(md) {
-        padding: 0;
+        // padding: 0;
         margin: auto 0;
       }
     }
