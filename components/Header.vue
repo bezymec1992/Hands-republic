@@ -35,7 +35,7 @@ export default {
 			menu: [
 				{
 					title: "Our Company",
-					to: "/"
+					to: "/our-company"
 				},
 				{
 					title: "Working Together",
@@ -43,11 +43,11 @@ export default {
 				},
 				{
 					title: "Our Brands",
-					to: "/"
+					to: "/brands"
 				},
 				{
 					title: "Software",
-					to: "/"
+					to: "/software"
 				},
 				{
 					title: "Careers",
@@ -76,10 +76,12 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+	position: relative;
 	padding-top: 3.2rem;
 	padding-bottom: 3.2rem;
 	// background: $white;
 	background: transparent;
+	z-index: 100;
 
 	@include media-breakpoint-down(md) {
 		padding-top: 2.7rem;
@@ -237,6 +239,13 @@ export default {
 				}
 			}
 		}
+	}
+
+	.header-absolute & {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
 	}
 }
 </style>

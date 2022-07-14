@@ -1,7 +1,7 @@
 <template>
   <div>
     <main-slot>
-      <template slot>
+      <div class="container">
         <div class="flex-column-reverse flex-lg-row row">
           <div class="intro__title-wrapp col-12 col-lg-8">
             <h1 class="h1 intro__title">Growing your business</h1>
@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-      </template>
+      </div>
     </main-slot>
 
     <InfoWrapper
@@ -54,7 +54,7 @@
         <div class="hands__wrapper">
           <CustomSelect
             :options="['Frederike Brouwer', 'Hülya Zobuoglu']"
-            :default="'Kiezen'"
+            default="Select hands you need..."
             class="select"
           />
         </div>
@@ -245,6 +245,20 @@ export default {
     @include media-breakpoint-down(md) {
       background: url("@/assets/imgs/hands-mb.png") no-repeat center;
       min-height: 350px;
+    }
+  }
+
+  .custom-select {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 910px;
+    max-width: 100%;
+
+    @include media-breakpoint-down(md) {
+      width: 410px;
+      top: 50%;
     }
   }
 }
