@@ -68,6 +68,15 @@ export default {
 
 <style lang="scss" scoped>
 .cookies {
+	@include media-breakpoint-down(md) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba($black, 0.25);
+	}
+
 	.inner-holder {
 		position: fixed;
 		left: 0;
@@ -83,10 +92,13 @@ export default {
 		@include media-breakpoint-up(md) {
 			width: 100%;
 			left: 50%;
-			bottom: 0;
 			transform: translateX(-50%);
 			bottom: 4rem;
 			padding: 6rem 5rem;
+		}
+
+		@include media-breakpoint-down(xl) {
+			bottom: 0;
 		}
 
 		@include media-breakpoint-down(md) {

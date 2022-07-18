@@ -35,37 +35,18 @@
       class="style2"
       title1="Super charging"
       title2="business performance"
-      btn-title="About us"
-      btn-to="/"
+      :btn="{ title: 'About us', to: '/' }"
       text="We champion small businesses in the digital world and have over 1,700 localised experts to help you spread your reach."
     />
     <Marquee>
       OUR <span>HANDS</span> <br class="d-md-none" />
       ARE EVERYWHERE
     </Marquee>
-    <div class="visual-section">
-      <div class="container">
-        <div class="row align-items-md-center">
-          <div class="col-md-6">
-            <div class="img-holder">
-              <img
-                src="@/assets/images/img-04.jpg"
-                alt="It’s all about TEAMING"
-              />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="h2">It’s all about TEAMING</h2>
-            <Button
-              title="Work together"
-              class="btn-dark-outline-title"
-              :has-icon="true"
-              type="button"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    <VisualSection
+      img="img-04.jpg"
+      title="It’s all about TEAMING"
+      :btn="{ title: 'Work together', to: '/working-together' }"
+    />
     <div class="text-section">
       <div class="container">
         <div class="row">
@@ -132,6 +113,7 @@ import Labels from "@/constants/labels";
 import QuoteSection from "@/components/QuoteSection";
 import Marquee from "@/components/Marquee";
 import Stand from "@/components/Stand";
+import VisualSection from "@/components/VisualSection";
 
 export default {
   components: {
@@ -142,11 +124,15 @@ export default {
     MainSlot,
     Marquee,
     Stand,
+    VisualSection,
   },
   data() {
     return {
       labelsList: [],
     };
+  },
+  created() {
+    this.labelsList = Labels;
   },
   head() {
     return {
@@ -154,9 +140,6 @@ export default {
         class: "header-absolute",
       },
     };
-  },
-  created() {
-    this.labelsList = Labels;
   },
 };
 </script>
@@ -196,15 +179,19 @@ export default {
       }
 
       @include media-breakpoint-down(lg) {
-        padding-top: 38rem;
+        padding-top: 40rem;
         margin-top: 0;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-top: 42rem;
       }
     }
 
     .intro-img {
       position: absolute;
       overflow: hidden;
-      top: -6rem;
+      top: -6.3rem;
       right: -10rem;
       width: 82rem;
 
@@ -212,16 +199,18 @@ export default {
         top: -6.5rem;
         right: 0rem;
         width: 64rem;
+        margin-right: -3rem;
+      }
+
+      @include media-breakpoint-down(sm) {
+        max-width: 62rem;
+        margin-left: -4rem;
       }
     }
 
     img {
       width: 100%;
       height: auto;
-
-      @include media-breakpoint-down(md) {
-        width: 110%;
-      }
     }
   }
 
@@ -271,40 +260,6 @@ export default {
         @include media-breakpoint-up(xl) {
           padding-top: 4rem;
         }
-      }
-    }
-  }
-
-  .visual-section {
-    .container {
-      max-width: 144rem;
-    }
-
-    .row {
-      @include media-breakpoint-up(lg) {
-        @include grid-gutter(8rem);
-      }
-    }
-
-    .h2 {
-      margin-bottom: 5rem;
-
-      @include media-breakpoint-down(md) {
-        margin-bottom: 3.2rem;
-      }
-    }
-
-    .img-holder {
-      margin-left: -2.4rem;
-
-      @include media-breakpoint-down(md) {
-        margin-right: -2.4rem;
-        margin-bottom: 3.3rem;
-      }
-
-      img {
-        width: 100%;
-        height: auto;
       }
     }
   }

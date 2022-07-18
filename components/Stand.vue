@@ -19,12 +19,12 @@
             {{ title2 }}
           </h2>
           <Button
-            v-if="btnTitle"
-            :title="btnTitle"
+            v-if="btn.title"
+            :title="btn.title"
             class="btn-dark"
             :has-icon="true"
             type="nuxt-link"
-            :to="btnTo"
+            :to="btn.to"
           />
         </div>
       </div>
@@ -40,9 +40,6 @@ import Button from "@/components/Button";
 
 export default {
   name: "Stand",
-  components: {
-    Button,
-  },
   props: {
     title1: {
       type: String,
@@ -60,21 +57,19 @@ export default {
       type: String,
       default: "career-stand-mb.png",
     },
-    btnTitle: {
-      type: String,
-      default: "",
-      require: false,
-    },
-    btnTo: {
-      type: String,
-      default: "/",
-      require: false,
+
+    btn: {
+      type: Object,
+      default: () => ({}),
     },
     text: {
       type: String,
       default: "",
       require: false,
     },
+  },
+  components: {
+    Button,
   },
 };
 </script>
