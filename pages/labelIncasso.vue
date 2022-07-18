@@ -3,7 +3,7 @@
     <!-- Intro section -->
 
     <main-slot>
-      <template slot>
+      <div class="container">
         <div class="flex-column-reverse flex-lg-row row">
           <div class="intro__title-wrapp col-12 col-lg-8">
             <h1 class="h1 intro__title">incasso hands</h1>
@@ -16,7 +16,7 @@
 
             <Button
               title="Work together"
-              class="btn-dark-outline-title intro__btn"
+              class="btn-dark-outline-title"
               :has-icon="true"
               type="button"
             />
@@ -33,15 +33,37 @@
             </div>
           </div>
         </div>
-      </template>
+      </div>
     </main-slot>
+    <!-- Business idea section -->
+    <StandForLabel
+      :title="stand2.title"
+      :text="stand2.text"
+      :img="stand2.img"
+      :imgMob="stand2.imgMob"
+    />
+    <!-- Ticker section -->
+
+    <Marquee>
+      BEST YOUNG <br class="d-md-none" /><span>SPECIALISTS</span>
+    </Marquee>
+
     <!-- Let our hands section -->
+
     <InfoWrap
       :title="info.title"
       :text="info.text"
       :img="info.img"
       :imgMob="info.imgMob"
     />
+    <!-- We are section -->
+    <div class="we-are-section">
+      <CardForLabel
+        :title="card1.title"
+        :img="card1.img"
+        :imgMob="card1.imgMob"
+      />
+    </div>
 
     <!-- Discover section -->
 
@@ -59,41 +81,71 @@
         </div>
       </div>
     </div>
-    <ContactSection />
+    <div class="contact-section">
+      <div class="container">
+        <ContactSection />
+      </div>
+    </div>
   </div>
 </template>
 
 
 <script >
 import MainSlot from "@/components/MainSlot";
+import StandForLabel from "~/components/StandForLabel.vue";
+import Marquee from "~/components/Marquee.vue";
 import InfoWrap from "@/components/InfoWrap";
 import LabelCard from "@/components/LabelCard";
 import Labels from "@/constants/labels";
 import ContactSection from "@/components/ContactSection.vue";
+import CardForLabel from "~/components/CardForLabel.vue";
+
 export default {
   components: {
     MainSlot,
+    StandForLabel,
+    Marquee,
     InfoWrap,
     LabelCard,
-
     ContactSection,
+    CardForLabel,
   },
   data() {
     return {
+      stand2: {
+        title: "business idea",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ",
+        img: "img-00023.png",
+        imgMob: "img-00022.png",
+      },
       info: {
         title: "Let our hands do it for you",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit.  ",
         img: "img-00021.jpg",
         imgMob: "img-00020.jpg",
       },
+      card1: {
+        title: "we are remote and flexible",
+
+        img: "img-00025.png",
+        imgMob: "img-00024.png",
+      },
       labelsList: [],
     };
   },
+  // head() {
+  //   return {
+  //     bodyAttrs: {
+  //       class: "header-absolute",
+  //     },
+  //   };
+  // },
   computed: {
     sliceLabelsArray() {
       return this.labelsList.slice(0, 2);
     },
   },
+
   created() {
     this.labelsList = Labels;
   },
@@ -156,4 +208,25 @@ export default {
 }
 
 // Business idea section
+
+// Discover section
+.section-labels-card {
+  padding-top: 17.7rem;
+  padding-bottom: 21.2rem;
+  @include media-breakpoint-down(lg) {
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+  }
+  &__title {
+    margin-bottom: 9.4rem;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 3.2rem;
+    }
+  }
+}
+
+// Contact section
+
+.contact-section {
+}
 </style>
