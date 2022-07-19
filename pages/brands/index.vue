@@ -6,7 +6,7 @@
 					<div class="intro__title-wrapp col-12 col-lg-6">
 						<h1 class="h1 intro__title">Our brands</h1>
 						<p class="intro__text">Our flagship brands operate across Europe, offering best in class expertise and services to thousands of customers.</p>
-						<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="button" />
+						<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" to="/working-together" />
 					</div>
 					<div class="col-12 col-lg-6">
 						<div class="intro-img">

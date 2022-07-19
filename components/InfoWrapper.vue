@@ -48,7 +48,7 @@ export default {
 		},
 		text2: {
 			type: String,
-			default: "description"
+			default: ""
 		},
 		span1: {
 			type: String,
@@ -84,8 +84,13 @@ export default {
 		}
 	}
 	.wrap__img {
-		@include media-breakpoint-down(md) {
-			margin-left: -70px;
+		// @include media-breakpoint-down(md) {
+		// 	margin-left: -70px;
+		// }
+
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
 

@@ -8,7 +8,7 @@
           </h2>
           <picture class="stand-img">
             <source
-              :srcset="require(`@/assets/imgs/${imgMob}`)"
+              :srcset="require(`@/assets/imgs/${img}`)"
               media="(max-width: 767px)"
             />
             <img :src="require(`@/assets/imgs/${img}`)" alt="img" />
@@ -40,18 +40,16 @@ import Button from "@/components/Button";
 
 export default {
   name: "Stand",
-  components: {
-    Button,
-  },
   props: {
     title1: {
       type: String,
-      default: "title",
+      default: "",
     },
     title2: {
       type: String,
       default: "description",
     },
+
     img: {
       type: String,
       default: "career-stand.png",
@@ -60,7 +58,6 @@ export default {
       type: String,
       default: "career-stand-mb.png",
     },
-
     btn: {
       type: Object,
       default: () => ({}),
@@ -70,6 +67,9 @@ export default {
       default: "",
       require: false,
     },
+  },
+  components: {
+    Button,
   },
 };
 </script>
