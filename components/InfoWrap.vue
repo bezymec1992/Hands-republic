@@ -1,7 +1,7 @@
 <template >
   <div class="wrap-info">
     <div class="container">
-      <div class="row g-0">
+      <div class="row">
         <div class="col-12 col-md-6">
           <div class="wrap-info__img">
             <picture>
@@ -27,18 +27,29 @@
               <p class="wrap-info__text">
                 {{ text }}
               </p>
+              <Button
+                v-if="btn.title"
+                :title="btn.title"
+                class="btn-dark"
+                :has-icon="true"
+                type="nuxt-link"
+                :to="btn.to"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- </div> -->
 </template>
 
 <script>
+import Button from "@/components/Button.vue";
 export default {
   name: "InfoWrap",
+  components: {
+    Button,
+  },
   props: {
     img: {
       type: String,
@@ -55,6 +66,10 @@ export default {
     text: {
       type: String,
       default: "description",
+    },
+    btn: {
+      type: Object,
+      default: () => ({}),
     },
   },
 };
@@ -94,7 +109,7 @@ export default {
   &__title {
     margin-bottom: 2rem;
     margin-top: 2rem;
-    max-width: 35rem;
+    max-width: 42rem;
     @include media-breakpoint-up(xxl) {
       margin-bottom: 3.2rem;
       max-width: 45rem;
@@ -118,6 +133,12 @@ export default {
     @include media-breakpoint-up(lg) {
       font-size: 2.4rem;
       line-height: 1.83;
+    }
+  }
+  .btn-dark {
+    margin-top: 3.2rem;
+    @include media-breakpoint-up(md) {
+      margin-top: 5rem;
     }
   }
 }
