@@ -40,9 +40,10 @@ export default {
     .card {
         background: #F2F1F2;
         margin-bottom: 63px;
-        @include media-breakpoint-down(md) {
-            margin-bottom: 20px;
-        }
+            @include media-breakpoint-down(md) {
+                margin-bottom: 20px;
+            }
+        
         .card__info {
             padding-left: 34px;
             padding-bottom: 45px;

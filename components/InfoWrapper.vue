@@ -48,15 +48,15 @@ export default {
 		},
         text2: {
 			type: String,
-			default: "description"
+			default: ""
 		},
         span1: {
             type: String,
-			default: "description"
+			default: ""
         },
         span2: {
             type: String,
-			default: "description"
+			default: ""
         }
 		
     }
@@ -84,12 +84,10 @@ export default {
                 text-align: left;
             }
         }
-        .wrap__img {
-            @include media-breakpoint-down(md) {
-                margin-left: -70px;
-            }
+        img {
+            width: 100%;
+            height: auto;
         }
-        
         .wrap__text {
             max-width: 459px;
             line-height: 40px;
@@ -103,6 +101,28 @@ export default {
                 }
             }
         }
+        &.style2 {
+            img {
+                margin-left: 60px;
+                @include media-breakpoint-down(xl) {
+                    margin-left: 0px;
+                }
+            }
+            .wrap__info {
+                padding-left: 0px;
+                margin-left: -60px;
+                @include media-breakpoint-down(lg) {
+                    margin: 30px auto 0;
+                    padding-left: 40px;
+                }
+                @include media-breakpoint-down(md) {
+                margin: 30px 0;
+                text-align: left;
+            }
+                
+            }
+        }
     }
+    
     
 </style>

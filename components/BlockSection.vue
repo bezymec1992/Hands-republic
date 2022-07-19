@@ -3,7 +3,8 @@
         <div class="container">
             <div class="block__wrapper">
                 <h2 class="h2 block__title">
-                    {{title}}
+                    <slot name="title"/>
+                    <!-- {{title}} -->
                 </h2>
                 <p class="block__text">
                     {{text}}

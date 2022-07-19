@@ -33,7 +33,7 @@ export default {
 	props: {
 		title1: {
 			type: String,
-			default: "title"
+			default: ""
 		},
 		title2: {
 			type: String,
@@ -114,7 +114,7 @@ export default {
 	&__text-holder {
 		font-size: 2rem;
 		line-height: 1.9;
-
+		padding-top: 1.5rem;
 		@include media-breakpoint-up(xl) {
 			max-width: 57.3rem;
 			padding-top: 4rem;
@@ -128,6 +128,23 @@ export default {
 
 		@include media-breakpoint-up(xl) {
 			margin-top: 5rem;
+		}
+	}
+	&.style2 {
+		.container {
+			@include media-breakpoint-up(xl) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			max-width: 1440px;
+			
+		}
+		.stand__content-holder {
+			@include media-breakpoint-up(xl) {
+				margin-left: 100px;
+			}
+			max-width: 557px;
+			margin-bottom: 0;
 		}
 	}
 }
