@@ -109,7 +109,6 @@ export default {
 	&__text-holder {
 		font-size: 2rem;
 		line-height: 1.9;
-
 		@include media-breakpoint-up(xl) {
 			max-width: 57.3rem;
 			padding-top: 4rem;
@@ -120,9 +119,20 @@ export default {
 
 	.btn {
 		margin-top: 2.2rem;
-
 		@include media-breakpoint-up(xl) {
 			margin-top: 5rem;
+		}
+	}
+	&.style2 {
+		.stand__content-holder {
+			@include media-breakpoint-up(xl) {
+				margin-left: 10rem;
+				margin-bottom: 0rem;
+				max-width: 55.7rem;
+			}
+		}
+		.container {
+			max-width: 1440px;
 		}
 	}
 }

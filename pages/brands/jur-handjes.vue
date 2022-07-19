@@ -168,7 +168,7 @@ export default {
 			margin-bottom: 8.5rem;
 		}
 		@include media-breakpoint-down(md) {
-			padding: 0 4.5rem 6rem;
+			padding: 0 0 6rem;
 		}
 		.benefit__title {
 			font-size: 5.8rem;
@@ -191,7 +191,8 @@ export default {
 			padding-left: 6rem;
 			margin: 0 auto;
 			@include media-breakpoint-down(md) {
-				max-width: 30rem;
+				max-width: 25rem;
+				padding-left: 3rem;
 			}
 		}
 		.benefit__item {
