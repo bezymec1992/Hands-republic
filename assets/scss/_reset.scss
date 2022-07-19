@@ -92,7 +92,7 @@ input[type="submit"]::-moz-focus-inner {
 	font-size: 10rem;
 	line-height: 1.1;
 
-	@include media-breakpoint-down(lg) {
+	@include media-breakpoint-down(xl) {
 		font-size: 7rem;
 	}
 

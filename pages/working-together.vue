@@ -45,7 +45,12 @@
 			</div>
 		</div>
 
-		<block-section :title="block.title" :text="block.text" :img="block.img" :img-mob="block.imgMob" />
+		<BlockSection :text="block.text" :img="block.img" :img-mob="block.imgMob">
+			<template #title>
+				Partnerships built <br class="d-md-none" />
+				with teams
+			</template>
+		</BlockSection>
 
 		<div class="cards">
 			<div class="container">

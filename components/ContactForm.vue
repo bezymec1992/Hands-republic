@@ -137,6 +137,10 @@ export default {
 	.btn {
 		width: 100%;
 		max-width: 32.8rem;
+
+		@include media-breakpoint-down(sm) {
+			max-width: 100%;
+		}
 	}
 
 	.donut {

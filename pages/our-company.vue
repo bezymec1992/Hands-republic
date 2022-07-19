@@ -36,7 +36,7 @@
 		<div class="hands">
 			<div class="container">
 				<div class="hands__wrapper">
-					<CustomSelect :options="['Frederike Brouwer', 'Hülya Zobuoglu']" default="Select hands you need..." class="select" />
+					<CustomSelect :options="selectProjects" default="Select hands you need..." class="select" @click="goToProject" />
 				</div>
 			</div>
 		</div>
@@ -90,6 +90,24 @@ export default {
 	},
 	data() {
 		return {
+			selectProjects: [
+				{
+					title: "Juridische Handjes",
+					to: "/1"
+				},
+				{
+					title: "Photograph Hands",
+					to: "/2"
+				},
+				{
+					title: "HandsHands",
+					to: "/3"
+				},
+				{
+					title: "One more hands",
+					to: "/4"
+				}
+			],
 			info: {
 				title: "Our story",
 				text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
@@ -145,6 +163,11 @@ export default {
 				}
 			]
 		};
+	},
+	methods: {
+		goToProject(value) {
+			this.$router.push({ path: value.to });
+		}
 	}
 };
 </script>
