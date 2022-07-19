@@ -129,6 +129,31 @@ export default {
 		}
 	}
 
+	&.btn-white-outline-title {
+		.title {
+			color: $white;
+			background: transparent;
+		}
+
+		.title,
+		.icon-holder {
+			border: solid 0.1rem $white;
+			border-radius: 3.6rem;
+		}
+
+		.icon-holder {
+			color: $black;
+			background: $white;
+		}
+
+		&:hover {
+			.title {
+				color: $black;
+				background: $white;
+			}
+		}
+	}
+
 	&.btn-dark-outline-title {
 		.title {
 			color: $black;
