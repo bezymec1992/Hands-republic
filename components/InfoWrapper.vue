@@ -48,7 +48,7 @@ export default {
 		},
 		text2: {
 			type: String,
-			default: "description"
+			default: ""
 		},
 		span1: {
 			type: String,
