@@ -5,12 +5,12 @@
         <div class="stand-for-label__img-wrap">
           <picture class="stand-for-label__img">
             <source
-              :srcset="require(`@/assets/imgs/${imgMob}`)"
+              :srcset="require(`@/assets/images/${imgMob}`)"
               media="(max-width: 992px)"
               width="100%"
               height="auto"
             />
-            <img :src="require(`@/assets/imgs/${img}`)" alt="img" />
+            <img :src="require(`@/assets/images/${img}`)" alt="img" />
           </picture>
         </div>
         <div class="stand-for-label__content-holder">
@@ -59,7 +59,7 @@ export default {
   overflow: hidden;
   &__img-wrap {
     margin-left: -8rem;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       margin-left: -2rem;
       margin-right: -2rem;
     }

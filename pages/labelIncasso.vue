@@ -15,7 +15,7 @@
             </div>
 
             <Button
-              title="Work together"
+              title="Visit website"
               class="btn-dark-outline-title"
               :has-icon="true"
               type="button"
@@ -92,13 +92,13 @@
 
 <script >
 import MainSlot from "@/components/MainSlot";
-import StandForLabel from "~/components/StandForLabel.vue";
-import Marquee from "~/components/Marquee.vue";
+import StandForLabel from "@/components/StandForLabel.vue";
+import Marquee from "@/components/Marquee.vue";
 import InfoWrap from "@/components/InfoWrap";
 import LabelCard from "@/components/LabelCard";
 import Labels from "@/constants/labels";
 import ContactSection from "@/components/ContactSection.vue";
-import CardForLabel from "~/components/CardForLabel.vue";
+import CardForLabel from "@/components/CardForLabel.vue";
 
 export default {
   components: {

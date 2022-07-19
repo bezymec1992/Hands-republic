@@ -40,6 +40,9 @@ import Button from "@/components/Button";
 
 export default {
   name: "Stand",
+  components: {
+    Button,
+  },
   props: {
     title1: {
       type: String,
@@ -67,9 +70,6 @@ export default {
       default: "",
       require: false,
     },
-  },
-  components: {
-    Button,
   },
 };
 </script>

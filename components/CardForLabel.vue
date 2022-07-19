@@ -54,6 +54,9 @@ export default {
 
 <style lang="scss" scoped>
 .card-for-label {
+  max-width: 144rem;
+  margin: 0 auto;
+  overflow: hidden;
   padding-top: 10rem;
   @include media-breakpoint-up(md) {
     padding-top: 9.5rem;
@@ -77,7 +80,7 @@ export default {
 
   .img-holder {
     margin-right: -8rem;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       margin-left: -2rem;
       margin-right: -2rem;
     }
