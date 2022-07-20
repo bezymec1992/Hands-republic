@@ -14,7 +14,7 @@
 
               <Button
                 title="Work together"
-                class="btn-dark-outline-title"
+                class="btn-white-outline-title"
                 :has-icon="true"
                 type="button"
               />
