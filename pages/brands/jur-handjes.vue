@@ -76,6 +76,8 @@ import ContactSection from "@/components/ContactSection";
 import LabelCard from "@/components/LabelCard";
 import Labels from "@/constants/labels";
 import BlockSection from "@/components/BlockSection";
+import showOtherLabels from "@/mixins/showOtherLabels";
+
 export default {
 	components: {
 		InfoWrapper,
@@ -84,13 +86,14 @@ export default {
 		LabelCard,
 		ContactSection
 	},
+	mixins: [showOtherLabels],
 	data() {
 		return {
 			labelsList: []
 		};
 	},
 	created() {
-		this.labelsList = Labels;
+		this.showLabels(Labels, "Juridische Handjes", this.labelsList);
 	}
 };
 </script>

@@ -12,7 +12,7 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 							</div>
 
-							<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="button" />
+							<Button title="Work together" class="btn-white-outline-title" :has-icon="true" type="button" />
 						</div>
 						<div class="col-12 col-lg-7">
 							<div class="intro-img">
@@ -28,7 +28,7 @@
 
 			<!-- Stand for label Business idea -->
 
-			<StandForLabel :title="stand2.title" :text="stand2.text" :img="stand2.img" :imgMob="stand2.imgMob" />
+			<StandForLabel :title="stand2.title" :text="stand2.text" :img="stand2.img" :img-mob="stand2.imgMob" />
 
 			<!-- Ticker section -->
 
@@ -36,7 +36,7 @@
 
 			<!-- InfoWrap We care section  -->
 
-			<InfoWrap :title="info.title" :text="info.text" :btn="{ title: 'Visit website', to: '/' }" :img="info.img" :imgMob="info.imgMob" />
+			<InfoWrap :title="info.title" :text="info.text" :btn="{ title: 'Visit website', to: '/' }" :img="info.img" :img-mob="info.imgMob" />
 
 			<!-- Map section -->
 
@@ -61,14 +61,14 @@
 			</div>
 			<!-- CardForLabel component -->
 
-			<CardForLabel :title="card.title" :img="card.img" :imgMob="card.imgMob" />
+			<CardForLabel :title="card.title" :img="card.img" :img-mob="card.imgMob" />
 			<!-- Discover section -->
 
 			<div class="section-labels-card">
 				<div class="container">
 					<h2 class="h2 section-labels-card__title">Discover other labels</h2>
 					<div class="row">
-						<div v-for="(item, index) in sliceLabelsArray" :key="index" class="col-md-6 col-lg-5 col-xl-4">
+						<div v-for="(item, index) in labelsList" :key="index" class="col-md-6 col-lg-5 col-xl-4">
 							<LabelCard :card="item" />
 						</div>
 					</div>
@@ -93,6 +93,8 @@ import CardForLabel from "@/components/CardForLabel.vue";
 import LabelCard from "@/components/LabelCard.vue";
 import Labels from "@/constants/labels";
 import ContactSection from "@/components/ContactSection.vue";
+import showOtherLabels from "@/mixins/showOtherLabels";
+
 export default {
 	components: {
 		StandForLabel,
@@ -101,6 +103,7 @@ export default {
 		LabelCard,
 		ContactSection
 	},
+	mixins: [showOtherLabels],
 	data() {
 		return {
 			stand2: {
@@ -123,14 +126,8 @@ export default {
 			labelsList: []
 		};
 	},
-	computed: {
-		sliceLabelsArray() {
-			return this.labelsList.slice(0, 2);
-		}
-	},
-
 	created() {
-		this.labelsList = Labels;
+		this.showLabels(Labels, "Tribal Hands", this.labelsList);
 	}
 };
 </script>
