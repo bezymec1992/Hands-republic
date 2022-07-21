@@ -14,7 +14,7 @@
 							</p>
 						</div>
 
-						<Button title="Work together" class="btn-white-outline-title" :has-icon="true" type="button" />
+						<Button title="Visit website" class="btn-white-outline-title" :has-icon="true" type="button" />
 					</div>
 					<div class="col-12 col-lg-4">
 						<div class="intro-img">
@@ -28,17 +28,18 @@
 			</div>
 		</main-slot>
 		<!-- Business idea section -->
-		<StandForLabel :title="stand2.title" :text="stand2.text" :img="stand2.img" :img-mob="stand2.imgMob" />
+		<StandForLabel :title="stand2.title" :text="stand2.text" :img="stand2.img" :imgMob="stand2.imgMob" />
 		<!-- Ticker section -->
 
 		<Marquee> BEST YOUNG <br class="d-md-none" /><span>SPECIALISTS</span> </Marquee>
 
 		<!-- Let our hands section -->
 
-		<InfoWrap :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" />
+		<InfoWrap :title="info.title" :text="info.text" :img="info.img" :imgMob="info.imgMob" />
 		<!-- We are section -->
+
 		<div class="we-are-section">
-			<CardForLabel :title="card1.title" :img="card1.img" :img-mob="card1.imgMob" />
+			<CardForLabel :title="card1.title" :img="card1.img" :imgMob="card1.imgMob" />
 		</div>
 
 		<!-- Discover section -->
@@ -47,17 +48,14 @@
 			<div class="container">
 				<h2 class="h2 section-labels-card__title">Discover other labels</h2>
 				<div class="row">
-					<div v-for="(item, index) in labelsList" :key="index" class="col-md-6 col-lg-5 col-xl-4">
+					<div v-for="(item, index) in sliceLabelsArray" :key="index" class="col-md-6 col-lg-5 col-xl-4">
 						<LabelCard :card="item" />
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="contact-section">
-			<div class="container">
-				<ContactSection />
-			</div>
-		</div>
+
+		<ContactSection />
 	</div>
 </template>
 
@@ -149,7 +147,7 @@ export default {
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			height: 100%;
-			width: 110rem;
+			width: 150rem;
 			right: 0%;
 			bottom: 0;
 		}
