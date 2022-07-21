@@ -58,7 +58,6 @@ export default {
   padding: 15rem 0 0;
   overflow: hidden;
   &__img-wrap {
-    margin-left: -8rem;
     @include media-breakpoint-down(lg) {
       margin-left: -2rem;
       margin-right: -2rem;

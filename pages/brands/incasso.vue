@@ -15,7 +15,7 @@
             </div>
 
             <Button
-              title="Work together"
+              title="Visit website"
               class="btn-white-outline-title"
               :has-icon="true"
               type="button"
@@ -57,6 +57,7 @@
       :imgMob="info.imgMob"
     />
     <!-- We are section -->
+
     <div class="we-are-section">
       <CardForLabel
         :title="card1.title"
@@ -81,11 +82,8 @@
         </div>
       </div>
     </div>
-    <div class="contact-section">
-      <div class="container">
-        <ContactSection />
-      </div>
-    </div>
+
+    <ContactSection />
   </div>
 </template>
 
@@ -189,7 +187,7 @@ export default {
     @include media-breakpoint-up(lg) {
       position: absolute;
       height: 100%;
-      width: 110rem;
+      width: 150rem;
       right: 0%;
       bottom: 0;
     }
