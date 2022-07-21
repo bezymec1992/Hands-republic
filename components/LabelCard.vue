@@ -83,5 +83,13 @@ export default {
 		font-size: 2rem;
 		line-height: 1.6;
 	}
+	&.style2.card-label {
+		background-color: transparent;
+		border: 1px solid gray;
+		&:hover {
+		background: $pattens-blue;
+		border: none;
+		}
+	}
 }
 </style>

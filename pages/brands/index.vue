@@ -23,7 +23,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div v-for="(item, index) in labelsList" :key="index" class="col-md-6 col-lg-5 col-xl-4">
-						<LabelCard :card="item" />
+						<LabelCard :card="item" class="style2" />
 					</div>
 				</div>
 			</div>

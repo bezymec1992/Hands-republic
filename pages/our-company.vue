@@ -5,7 +5,7 @@
 				<div class="flex-column-reverse flex-lg-row row">
 					<div class="intro__title-wrapp col-12 col-lg-8">
 						<h1 class="h1 intro__title">Growing your business</h1>
-						<Button title="Work together" class="btn-dark" :has-icon="true" type="button" />
+						<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="button" />
 					</div>
 					<div class="col-12 col-lg-4">
 						<div class="intro-img">
@@ -52,7 +52,7 @@
 					</h2>
 					<div class="shaping__text-wap col-12 col-xl-6">
 						<p class="shaping__text">Our passionate executive and non-executive board members reflect the entrepreneurial spirit that brought about Heands Republic and remains at the heart of how our business is evolving.</p>
-						<Button title="Find your team" class="btn-dark" :has-icon="true" type="button" />
+						<Button title="Find your team" class="btn-dark-outline-title" :has-icon="true" type="button" />
 					</div>
 				</div>
 			</div>
@@ -186,7 +186,7 @@ export default {
 			position: absolute;
 			height: 100%;
 			width: 110rem;
-			right: 5%;
+			right: -3%;
 			bottom: 0;
 		}
 
@@ -223,6 +223,7 @@ export default {
 		@include media-breakpoint-down(md) {
 			background: url("@/assets/imgs/hands-mb.png") no-repeat center;
 			min-height: 350px;
+			background-size: auto 127%;
 		}
 	}
 

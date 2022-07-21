@@ -7,7 +7,7 @@
             <h1 class="h1 intro__title">We are better together</h1>
             <Button
               title="Let’s talk"
-              class="btn-dark"
+              class="btn-dark-outline-title"
               :has-icon="true"
               type="button"
             />
@@ -151,7 +151,7 @@ export default {
       position: absolute;
       height: 100%;
       width: 100rem;
-      right: -5%;
+      right: 0;
       bottom: 0;
     }
     @include media-breakpoint-down(lg) {
@@ -172,6 +172,10 @@ export default {
   }
   .card-title {
     margin-bottom: 3rem;
+    font-size: 12rem;
+    @include media-breakpoint-down(md) {
+      font-size: 5rem;
+    }
   }
 }
 
