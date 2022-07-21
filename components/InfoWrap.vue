@@ -118,7 +118,7 @@ export default {
   }
 
   &__title {
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
 
     max-width: 35rem;
     @include media-breakpoint-up(xxl) {

@@ -14,20 +14,20 @@
               />
             </div>
           </div>
-          <div
-            class="col-12 col-md-6 d-flex flex-column software-header__wrapper"
-          >
-            <h1 class="h2 software-header__title">
-              Software <br />
-              hands republic
-            </h1>
-            <Button
-              title="Work together"
-              class="btn-dark-outline-title"
-              type="nuxt-link"
-              to="/contact"
-              :has-icon="true"
-            />
+          <div class="col-12 col-md-6 d-flex align-items-center">
+            <div class="software-header__wrapper">
+              <h1 class="h2 software-header__title">
+                Software <br />
+                hands republic
+              </h1>
+              <Button
+                title="Work together"
+                class="btn-dark-outline-title"
+                type="nuxt-link"
+                to="/contact"
+                :has-icon="true"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
 
     <section class="functionalities">
       <div class="container">
-        <div class="row g-0">
+        <div class="row">
           <div class="col-12 col-md-6 functionalities__text-holder">
             <h2 class="h2 functionalities__title">
               multipule <br />
@@ -153,7 +153,7 @@
         <div class="row dashboard__wrapper">
           <div class="col-12">
             <div class="dashboard__body">
-              <h3 class="dashboard__title h2 text-uppercase">dashboard</h3>
+              <h3 class="dashboard__title h2">Dashboard</h3>
               <p class="dashboard__text">
                 Check requests, tasks, milestones, users and agenda
               </p>
@@ -180,12 +180,12 @@
     <section class="manage">
       <div class="container">
         <div class="row flex-md-row-reverse">
-          <div class="col-12 col-md-5 manage__right">
+          <div class="col-12 col-md-6 manage__right">
             <div class="manage__body">
-              <h3 class="manage__title h2 text-uppercase">
+              <h2 class="manage__title h2">
                 Manage agenda <br />
                 & availibility
-              </h3>
+              </h2>
               <p class="manage__subtitle">
                 Manage how much and when will you work.
               </p>
@@ -201,7 +201,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-7">
+          <div class="col-12 col-md-6 manage__visual">
             <img
               class="manage__img d-none d-md-flex"
               src="../assets/images/img-00012.png"
@@ -225,7 +225,7 @@
               </h2>
 
               <div class="control__text-holder">
-                <p class="control__text">
+                <p>
                   We care about your personal information and that's why we have
                   created a lot of additional security moduls which help to make
                   everything safe
@@ -233,17 +233,19 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-7 d-flex justify-content-center">
-            <picture>
-              <source
-                srcset="@/assets/images/img-00013.png"
-                media="(max-width: 1200px)"
-              />
-              <img
-                src="@/assets/images/img-00014.png"
-                alt="image description"
-              />
-            </picture>
+          <div class="col-12 col-md-7 px-0 d-flex justify-content-center">
+            <div class="control__img-holder">
+              <picture>
+                <source
+                  srcset="@/assets/images/img-00013.png"
+                  media="(max-width: 1200px)"
+                />
+                <img
+                  src="@/assets/images/img-00014.png"
+                  alt="image description"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
@@ -261,13 +263,16 @@
                   srcset="@/assets/images/img-00015.jpg"
                   media="(max-width: 768px)"
                 />
-                <img src="@/assets/images/img-00016.jpg" alt="match-making" />
+                <img
+                  src="@/assets/images/img-00016.jpg"
+                  alt="image description"
+                />
               </picture>
             </div>
           </div>
           <div class="col-12 col-md-6 d-flex align-items-center">
             <div class="join-future__wrapper">
-              <h2 class="join-future__title h2 text-uppercase d-md-none">
+              <h2 class="join-future__title h2 d-md-none">
                 Join the future <br />
                 right now
               </h2>
@@ -370,21 +375,17 @@ export default {
 
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
       }
     }
 
     &__wrapper {
       position: relative;
       z-index: 1;
-      padding-top: 1.8rem;
-      padding-bottom: 6.8rem;
-      // padding-left: 2rem;
-      // padding-right: 2rem;
 
-      @include media-breakpoint-up(md) {
-        // padding: 0;
-        margin: auto 0;
+      @include media-breakpoint-down(md) {
+        padding-top: 1.8rem;
+        padding-bottom: 6.8rem;
       }
     }
     &__title {
@@ -418,60 +419,32 @@ export default {
         padding-bottom: 0;
       }
     }
-    &__title {
-      font-size: 5rem;
-      line-height: 1.2;
-
-      @include media-breakpoint-up(xl) {
-        font-size: 10rem;
-      }
-    }
   }
 
   // Labels section
 
   .labels {
-    padding-top: 8.481rem;
+    padding-top: 5rem;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       padding-top: 17.3rem;
-    }
-
-    .container {
-      @include media-breakpoint-up(md) {
-        // padding-left: 4rem;
-        // padding-right: 8rem;
-      }
     }
   }
 
   // Smart section
 
   .smart {
-    padding-top: 5.2rem;
+    padding-top: 10rem;
     padding-bottom: 8rem;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xl) {
       padding-top: 20.6rem;
       padding-bottom: 11.6rem;
     }
-    .container {
-      @include media-breakpoint-up(md) {
-        // padding-left: 8rem;
-        // padding-right: 8rem;
-      }
-    }
 
     &__title {
-      font-size: 5rem;
-      line-height: 1;
       margin-bottom: 1.4rem;
       @include media-breakpoint-up(md) {
         margin-bottom: 2.8rem;
-      }
-
-      @include media-breakpoint-up(xl) {
-        font-size: 10rem;
-        line-height: 1.1;
       }
     }
     &__text {
@@ -483,57 +456,13 @@ export default {
         line-height: 1.83;
       }
     }
+
     &__img {
       width: 100%;
       height: auto;
       margin-bottom: 2.8rem;
       @include media-breakpoint-up(md) {
         margin-bottom: 0;
-      }
-    }
-  }
-
-  // Flexible section
-
-  .flexible-remote {
-    &__img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 3.2rem;
-    }
-
-    &__title {
-      font-size: 5rem;
-      line-height: 1;
-      margin-bottom: 1.6rem;
-      @include media-breakpoint-up(md) {
-        margin-bottom: 4.6rem;
-      }
-
-      @include media-breakpoint-up(xl) {
-        font-size: 10rem;
-        line-height: 1.1;
-      }
-    }
-    &__wrapper {
-      padding-left: 2rem;
-
-      @include media-breakpoint-up(sm) {
-      }
-      @include media-breakpoint-up(xl) {
-        padding-left: 8rem;
-      }
-    }
-    &__text-holder {
-      max-width: 45rem;
-    }
-    &__text {
-      font-size: 2rem;
-      line-height: 1.6;
-      margin: 0;
-      @include media-breakpoint-up(lg) {
-        font-size: 2.4rem;
-        line-height: 1.83;
       }
     }
   }
@@ -555,20 +484,18 @@ export default {
     &__title {
       margin-bottom: 1.6rem;
       @include media-breakpoint-up(md) {
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
       }
     }
-    &__subtitle {
-      margin-bottom: 2.24rem;
-      @include media-breakpoint-up(md) {
-        margin-bottom: 2.8rem;
-      }
-    }
+
     &__text {
       margin-bottom: 2.4rem;
-
+      font-size: 2rem;
+      line-height: 1.6;
       @include media-breakpoint-up(md) {
         margin-bottom: 2.8rem;
+        font-size: 2.4rem;
+        line-height: 1.83;
       }
     }
 
@@ -582,24 +509,17 @@ export default {
 
   .manage {
     padding-top: 10rem;
-    &__right {
+    &__visual {
       @include media-breakpoint-up(xxl) {
         padding-right: 0;
         padding-left: 0;
       }
     }
     &__title {
-      font-size: 5rem;
-      line-height: 1;
       margin-bottom: 1.6rem;
 
       @include media-breakpoint-up(md) {
         margin-bottom: 4rem;
-      }
-
-      @include media-breakpoint-up(xl) {
-        font-size: 10rem;
-        line-height: 1.1;
       }
     }
     &__subtitle {
@@ -609,7 +529,7 @@ export default {
       @include media-breakpoint-up(md) {
         font-size: 2.4rem;
         line-height: 1.83;
-        margin-bottom: 5.8rem;
+        margin-bottom: 2.8rem;
       }
     }
     &__text {
@@ -635,7 +555,6 @@ export default {
   // Control section
 
   .control {
-    padding-top: 10rem;
     overflow: hidden;
     max-width: 144rem;
     margin: 0 auto;
@@ -649,20 +568,20 @@ export default {
         padding-left: 0;
       }
     }
+    &__body {
+      padding-top: 0;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 10rem;
+      }
+    }
     &__title {
-      font-size: 5rem;
-      line-height: 1;
       margin-bottom: 1.6rem;
       @include media-breakpoint-up(md) {
         margin-bottom: 3.5rem;
       }
-
-      @include media-breakpoint-up(xl) {
-        font-size: 10rem;
-        line-height: 1.1;
-      }
     }
-    &__text {
+    &__text-holder {
       font-size: 2rem;
       line-height: 1.6;
       margin-bottom: 0.8rem;
@@ -672,12 +591,17 @@ export default {
         max-width: 53rem;
       }
       @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
         font-size: 2.4rem;
         line-height: 1.83;
-        margin-bottom: 0;
       }
     }
-    .img {
+    &__img-holder {
+      width: 100%;
+      height: auto;
+    }
+
+    img {
       width: 100%;
       height: auto;
     }
@@ -712,17 +636,10 @@ export default {
       }
     }
 
-    &__title {
-      font-size: 5rem;
-      line-height: 1;
-      @include media-breakpoint-up(md) {
-      }
-      @include media-breakpoint-up(xl) {
-        font-size: 10rem;
-        line-height: 1.1;
-      }
-    }
     &__wrapper {
+      @include media-breakpoint-up(md) {
+        padding-left: 2rem;
+      }
       @include media-breakpoint-up(lg) {
         padding-left: 8rem;
       }
