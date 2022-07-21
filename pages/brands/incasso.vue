@@ -47,7 +47,7 @@
 			<div class="container">
 				<h2 class="h2 section-labels-card__title">Discover other labels</h2>
 				<div class="row">
-					<div v-for="(item, index) in sliceLabelsArray" :key="index" class="col-md-6 col-lg-5 col-xl-4">
+					<div v-for="(item, index) in labelsList" :key="index" class="col-md-6 col-lg-5 col-xl-4">
 						<LabelCard :card="item" />
 					</div>
 				</div>
