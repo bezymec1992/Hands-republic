@@ -2,12 +2,15 @@
 	<div class="visual-section">
 		<div class="container">
 			<div class="row align-items-md-center">
-				<div class="col-md-6">
+				<div class="col-md-6 col-xl-7">
 					<div class="img-holder">
-						<img v-if="img" :src="require(`@/assets/images/${img}`)" alt="" />
+						<picture>
+							<source v-if="imgMob" :srcset="require(`@/assets/images/${imgMob}`)" media="(max-width: 768px)" />
+							<img :src="require(`@/assets/images/${img}`)" :alt="title" />
+						</picture>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 col-xl-5">
 					<h2 class="h2">{{ title }}</h2>
 					<Button v-if="btn.title" :title="btn.title" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" :to="btn.to" />
 				</div>
@@ -23,6 +26,10 @@ export default {
 	name: "VisualSection",
 	props: {
 		img: {
+			type: String,
+			default: ""
+		},
+		imgMob: {
 			type: String,
 			default: ""
 		},

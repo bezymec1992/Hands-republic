@@ -119,7 +119,7 @@ export default {
 		display: block;
 		padding: 0.5rem 1rem;
 		font-size: 1.6rem;
-		color: rgba($black, 0.8);
+		color: $gray;
 		background: transparent;
 		z-index: 2;
 
@@ -137,7 +137,7 @@ export default {
 		border-radius: 3rem;
 
 		&::placeholder {
-			color: rgba($black, 0.5);
+			color: $gray;
 		}
 
 		@include media-breakpoint-down(md) {
@@ -182,9 +182,9 @@ export default {
 	}
 
 	&.focus {
-		.label {
-			color: $black;
-		}
+		// .label {
+		// 	color: $black;
+		// }
 	}
 
 	&.error {

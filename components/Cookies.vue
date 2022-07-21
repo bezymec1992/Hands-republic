@@ -75,6 +75,7 @@ export default {
 		width: 100%;
 		height: 100%;
 		background: rgba($black, 0.25);
+		z-index: 100;
 	}
 
 	.inner-holder {
@@ -84,9 +85,9 @@ export default {
 		width: 100%;
 		max-width: 100rem;
 		padding: 5rem 3rem 5rem 3rem;
-		z-index: 100;
 		font-size: 2rem;
 		color: $black;
+		z-index: 100;
 		background: $wild-sand;
 
 		@include media-breakpoint-up(md) {
