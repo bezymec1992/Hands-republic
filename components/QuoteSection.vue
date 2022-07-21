@@ -78,6 +78,20 @@ export default {
 		left: -70px;
 		z-index: -1;
 	}
+
+	.quote-img {
+		@include media-breakpoint-down(sm) {
+			margin: 0 -4rem;
+		}
+
+		img {
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
 	@include media-breakpoint-down(xl) {
 		.quote-dots {
 			z-index: 1;

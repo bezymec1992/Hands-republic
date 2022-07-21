@@ -7,7 +7,13 @@
             <h2 class="card-for-label__title h2">{{ title }}</h2>
             <Button
               title="Visit website"
-              class="btn-dark"
+              class="btn-dark d-none d-md-inline-flex"
+              :has-icon="true"
+              type="button"
+            />
+            <Button
+              title="Visit website"
+              class="btn-dark-outline-title d-md-none"
               :has-icon="true"
               type="button"
             />
@@ -97,6 +103,11 @@ export default {
     }
   }
   .btn-dark {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 4rem;
+    }
+  }
+  .btn-dark-outline-title {
     @include media-breakpoint-down(md) {
       margin-bottom: 4rem;
     }

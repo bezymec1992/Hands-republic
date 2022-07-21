@@ -1,13 +1,15 @@
 <template >
   <div class="wrap-info">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6">
+      <div class="row g-0">
+        <div class="col-12 col-md-7">
           <div class="wrap-info__img">
             <picture>
               <source
                 :srcset="require(`@/assets/images/${imgMob}`)"
                 media="(max-width: 992px)"
+                width="580px"
+                height="406px"
               />
               <img
                 :src="require(`@/assets/images/${img}`)"
@@ -18,7 +20,7 @@
             </picture>
           </div>
         </div>
-        <div class="col-12 col-md-6 d-flex align-items-center">
+        <div class="col-12 col-md-5 d-flex align-items-center">
           <div class="wrap-info__wrapper">
             <h2 class="h2 wrap-info__title">
               {{ title }}
@@ -30,7 +32,15 @@
               <Button
                 v-if="btn.title"
                 :title="btn.title"
-                class="btn-dark"
+                class="btn-dark d-none d-md-inline-flex"
+                :has-icon="true"
+                type="nuxt-link"
+                :to="btn.to"
+              />
+              <Button
+                v-if="btn.title"
+                :title="btn.title"
+                class="btn-dark-outline-title d-md-none"
                 :has-icon="true"
                 type="nuxt-link"
                 :to="btn.to"
@@ -83,6 +93,7 @@ export default {
 
   &__img {
     margin-left: -8rem;
+
     @include media-breakpoint-down(sm) {
       margin-left: -2rem;
       margin-right: -2rem;
@@ -107,10 +118,11 @@ export default {
   }
 
   &__title {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    max-width: 42rem;
+    margin-bottom: 1.6rem;
+
+    max-width: 35rem;
     @include media-breakpoint-up(xxl) {
+      margin-top: 0;
       margin-bottom: 3.2rem;
       max-width: 45rem;
     }
@@ -136,6 +148,12 @@ export default {
     }
   }
   .btn-dark {
+    margin-top: 3.2rem;
+    @include media-breakpoint-up(md) {
+      margin-top: 5rem;
+    }
+  }
+  .btn-dark-outline-title {
     margin-top: 3.2rem;
     @include media-breakpoint-up(md) {
       margin-top: 5rem;

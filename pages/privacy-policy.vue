@@ -97,6 +97,15 @@ export default {
 		}
 	}
 
+	a {
+		color: $picton-blue;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	ul {
 		padding-left: 1.4rem;
 		margin-bottom: 0;

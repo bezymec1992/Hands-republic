@@ -16,8 +16,9 @@
 					</Input>
 				</div>
 			</div>
-			<Input v-model="form.message" placeholder="Type your message" label="Your message" input-type="textarea" :error-showing="$v.form.message.$error" />
-			<Button type="button" title="Send" class="btn-dark" @click="submitForm" />
+			<Input v-model="form.message" placeholder="Your Message" label="Your message" input-type="textarea" :error-showing="$v.form.message.$error" />
+
+			<Button type="button" :title="up_lg ? 'Send Your Message' : 'Send'" class="btn-dark" @click="submitForm" />
 		</form>
 
 		<modal ref="modal" class="contact-from">
@@ -48,6 +49,7 @@ import { validationMixin } from "vuelidate";
 import { required, email } from "vuelidate/lib/validators";
 import Input from "@/components/Inputs/Input";
 import Button from "@/components/Button";
+import getterBreakpoints from "@/mixins/getterBreakpoints";
 
 export default {
 	name: "ContactForm",
@@ -55,7 +57,7 @@ export default {
 		Input,
 		Button
 	},
-	mixins: [validationMixin],
+	mixins: [validationMixin, getterBreakpoints],
 	data() {
 		return {
 			form: {
