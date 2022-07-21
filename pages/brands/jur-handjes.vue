@@ -58,7 +58,7 @@
 		<div class="section-labels-card">
 			<div class="container">
 				<h2 class="h2 labels-card-title">Discover other labels</h2>
-				<div class="row justify-content-center">
+				<div class="row">
 					<div v-for="(item, index) in labelsList" :key="index" class="col-md-6 col-lg-5 col-xl-4">
 						<LabelCard :card="item" />
 					</div>
