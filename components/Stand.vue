@@ -95,9 +95,12 @@ export default {
       margin-bottom: 0;
     }
   }
+  .stand__title2 {
+    max-width: 464px;
+  }
   &__content-holder {
     @include media-breakpoint-up(xl) {
-      margin-left: -15rem;
+      margin-left: -14rem;
       margin-bottom: -9.5rem;
     }
   }
@@ -134,6 +137,7 @@ export default {
 		}
 	}
 	&.style2 {
+    
 		.stand__content-holder {
 			@include media-breakpoint-up(xl) {
 				margin-left: 10rem;
@@ -143,6 +147,10 @@ export default {
 		}
 		.container {
 			max-width: 1440px;
+      @include media-breakpoint-up(xl) {
+        padding-left: 0;
+      }
+      
 		}
 	}
 }

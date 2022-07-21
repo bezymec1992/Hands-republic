@@ -95,7 +95,8 @@ import InfoWrap from "@/components/InfoWrap";
 import LabelCard from "@/components/LabelCard";
 import Labels from "@/constants/labels";
 import ContactSection from "@/components/ContactSection.vue";
-import CardForLabel from "~/components/CardForLabel.vue";
+import CardForLabel from "@/components/CardForLabel.vue";
+import showOtherLabels from "@/mixins/showOtherLabels";
 
 export default {
   components: {
@@ -107,6 +108,7 @@ export default {
     ContactSection,
     CardForLabel,
   },
+  mixins: [showOtherLabels],
   data() {
     return {
       stand2: {
@@ -123,28 +125,14 @@ export default {
       },
       card1: {
         title: "we are remote and flexible",
-
         img: "img-00025.png",
         imgMob: "img-00024.png",
       },
       labelsList: [],
     };
   },
-  // head() {
-  //   return {
-  //     bodyAttrs: {
-  //       class: "header-absolute",
-  //     },
-  //   };
-  // },
-  computed: {
-    sliceLabelsArray() {
-      return this.labelsList.slice(0, 2);
-    },
-  },
-
   created() {
-    this.labelsList = Labels;
+    this.showLabels(Labels, "Incasso hands", this.labelsList);
   },
 };
 </script>

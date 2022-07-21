@@ -28,7 +28,7 @@
 						<div class="join__title-wrap col-12 col-xl-6">
 							<h2 class="h2 join__title">Reasons to join Hands Republic</h2>
 							<div class="desk">
-								<Button title="Find your team" class="btn-dark" :has-icon="true" type="button" />
+								<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="button" />
 							</div>
 						</div>
 						<div class="join__items col-12 col-xl-6">
@@ -69,8 +69,15 @@
 			</div>
 		</div>
 
-		<block-section :title="block.title" :text="block.text" :img="block.img" :imgMob="block.imgMob" />
-
+		<block-section :title="block.title" :text="block.text" :img="block.img" :imgMob="block.imgMob">
+		<template #title>
+				Inclusive hiring
+			</template>
+		</block-section>
+		<Marquee>
+			SHARE <span>YOUR</span> <br class="d-md-none" />
+			PASSION
+    	</Marquee>
 		<contact-section />
 	</div>
 </template>
@@ -79,13 +86,16 @@
 import MainSlot from "@/components/MainSlot";
 import Stand from "@/components/Stand";
 import BlockSection from "@/components/BlockSection";
+import Marquee from "@/components/Marquee";
 import ContactSection from "@/components/ContactSection";
+
 
 export default {
 	components: {
 		MainSlot,
 		Stand,
 		BlockSection,
+		Marquee,
 		ContactSection
 	},
 	data() {
@@ -225,5 +235,10 @@ export default {
 			}
 		}
 	}
+	
 }
+
+.block-section {
+		padding-bottom: 0;
+	}
 </style>

@@ -52,11 +52,11 @@ export default {
 		},
 		span1: {
 			type: String,
-			default: "description"
+			default: ""
 		},
 		span2: {
 			type: String,
-			default: "description"
+			default: ""
 		}
 	}
 };
@@ -84,16 +84,11 @@ export default {
 		}
 	}
 	.wrap__img {
-		// @include media-breakpoint-down(md) {
-		// 	margin-left: -70px;
-		// }
-
 		img {
 			width: 100%;
 			height: auto;
 		}
 	}
-
 	.wrap__text {
 		max-width: 459px;
 		line-height: 40px;
@@ -104,6 +99,20 @@ export default {
 		.wrap__span {
 			@include media-breakpoint-up(lg) {
 				display: none;
+			}
+		}
+	}
+	&.style2 {
+		.wrap__img {
+			@include media-breakpoint-up(lg) {
+				margin-left: 70px;
+			}
+		}
+		.wrap__info {
+			@include media-breakpoint-up(lg) {
+				padding-left: 0px;
+				margin-left: -120px;
+				max-width: 500px;
 			}
 		}
 	}

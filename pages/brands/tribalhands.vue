@@ -121,6 +121,8 @@ import CardForLabel from "@/components/CardForLabel.vue";
 import LabelCard from "@/components/LabelCard.vue";
 import Labels from "@/constants/labels";
 import ContactSection from "@/components/ContactSection.vue";
+import showOtherLabels from "@/mixins/showOtherLabels";
+
 export default {
   components: {
     StandForLabel,
@@ -129,6 +131,7 @@ export default {
     LabelCard,
     ContactSection,
   },
+  mixins: [showOtherLabels],
   data() {
     return {
       stand2: {
@@ -151,14 +154,8 @@ export default {
       labelsList: [],
     };
   },
-  computed: {
-    sliceLabelsArray() {
-      return this.labelsList.slice(0, 2);
-    },
-  },
-
   created() {
-    this.labelsList = Labels;
+    this.showLabels(Labels, "Tribal Hands", this.labelsList);
   },
 };
 </script>

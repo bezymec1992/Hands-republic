@@ -38,12 +38,12 @@
 						</ul>
 					</div>
 					<div class="benefit__block col-12 col-lg-6">
-						<h3 class="h3 benefit__title">Benefits for business</h3>
+						<h3 class="h3 benefit__title">Benefits for students</h3>
 						<ul class="benefit__items">
-							<li class="benefit__item">Favorable cost</li>
-							<li class="benefit__item">Quality of services</li>
-							<li class="benefit__item">Save your time</li>
-							<li class="benefit__item">Quality of services</li>
+							<li class="benefit__item">Career start</li>
+							<li class="benefit__item">Experience</li>
+							<li class="benefit__item">The first customers</li>
+							<li class="benefit__item">Flexible schedule</li>
 						</ul>
 					</div>
 				</div>
@@ -76,6 +76,8 @@ import ContactSection from "@/components/ContactSection";
 import LabelCard from "@/components/LabelCard";
 import Labels from "@/constants/labels";
 import BlockSection from "@/components/BlockSection";
+import showOtherLabels from "@/mixins/showOtherLabels";
+
 export default {
 	components: {
 		InfoWrapper,
@@ -84,13 +86,14 @@ export default {
 		LabelCard,
 		ContactSection
 	},
+	mixins: [showOtherLabels],
 	data() {
 		return {
 			labelsList: []
 		};
 	},
 	created() {
-		this.labelsList = Labels;
+		this.showLabels(Labels, "Juridische Handjes", this.labelsList);
 	}
 };
 </script>
@@ -191,7 +194,7 @@ export default {
 			padding-left: 6rem;
 			margin: 0 auto;
 			@include media-breakpoint-down(md) {
-				max-width: 25rem;
+				max-width: 26rem;
 				padding-left: 3rem;
 			}
 		}
