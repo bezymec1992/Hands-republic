@@ -88,7 +88,7 @@ export default {
 		border: 1px solid gray;
 		&:hover {
 		background: $pattens-blue;
-		border: none;
+		border: 1px solid $pattens-blue;
 		}
 	}
 }
