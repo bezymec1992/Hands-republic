@@ -120,15 +120,35 @@ export default {
         this.form[Vmodel] = x.substring(0, 100);
       }
     },
-    submitForm() {
+    async submitForm() {
       this.$v.form.$touch();
 
       if (this.$v.form.$invalid) {
         return console.log("some erorr");
       } else {
-        console.log("form success");
-        this.requestDataSet("success", "has been sent");
-        this.openModal();
+        const url = this.$config.apiURL + "/contact-form";
+        const formData = {
+          name: this.form.name,
+          email: this.form.email,
+          text: this.form.message,
+        };
+
+        try {
+          this.requestDataSet("success", "has been sent");
+          this.openModal();
+
+          const response = await fetch(url, {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify(formData),
+          });
+          await response.json();
+          console.log("form success");
+        } catch (error) {
+          console.error("error", error);
+        }
 
         setTimeout(() => {
           this.request.loading = false;
@@ -143,7 +163,6 @@ export default {
 
     clearForm() {
       this.$v.$reset();
-
       this.form.name = "";
       this.form.email = "";
       this.form.message = "";
