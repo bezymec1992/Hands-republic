@@ -113,7 +113,7 @@ export default {
 	}
 
 	&__text-holder {
-		padding-top: 7.7rem;
+		padding-top: 2.7rem;
 		font-size: 2rem;
 		line-height: 1.9;
 		@include media-breakpoint-up(xl) {

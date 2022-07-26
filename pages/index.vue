@@ -169,7 +169,7 @@ export default {
 
 			@include media-breakpoint-down(sm) {
 				max-width: 64rem;
-				margin-left: -4rem;
+				margin-left: 0rem;
 			}
 		}
 
