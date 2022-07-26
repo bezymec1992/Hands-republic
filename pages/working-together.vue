@@ -5,7 +5,7 @@
 				<div class="flex-column-reverse flex-lg-row row">
 					<div class="intro__title-wrapp col-12 col-lg-5">
 						<h1 class="h1 intro__title">We are better together</h1>
-						<Button title="Let’s talk" class="btn-dark-outline-title" :has-icon="true" type="button" />
+						<Button title="Let’s talk" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" to="/contact" />
 					</div>
 					<div class="col-12 col-lg-7">
 						<div class="intro-img">
@@ -116,6 +116,8 @@ export default {
 	background: #ebadbd;
 	position: relative;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
 
 	@include media-breakpoint-up(md) {
 		min-height: 73rem;
@@ -123,6 +125,8 @@ export default {
 
 	.intro__title-wrapp {
 		width: 55.3rem;
+		margin-top: 0;
+		padding-bottom: 0;
 	}
 	@include media-breakpoint-down(lg) {
 		background: #f3f3f3;

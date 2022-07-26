@@ -12,7 +12,7 @@
 							<nuxt-link to="/">HANDS REPUBLIC</nuxt-link>
 						</strong>
 					</li>
-					<li v-for="(item, index) in menu" :key="index">
+					<li v-for="(item, index) in menu" :key="index" @click="menuClose">
 						<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
 					</li>
 				</ul>
@@ -69,6 +69,10 @@ export default {
 			} else {
 				document.body.classList.remove("menu-opened");
 			}
+		},
+		menuClose() {
+			this.menuOpen = false;
+			document.body.classList.remove("menu-opened");
 		}
 	}
 };

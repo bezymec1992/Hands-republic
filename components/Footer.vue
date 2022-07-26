@@ -44,11 +44,11 @@ export default {
 		return {
 			menu: [
 				[
-					{ title: "Our Company", to: "/" },
-					{ title: "Working Together", to: "/" },
-					{ title: "Our Brands", to: "/" },
-					{ title: "Software", to: "/" },
-					{ title: "Careers", to: "/" },
+					{ title: "Our Company", to: "/our-company" },
+					{ title: "Working Together", to: "/working-together" },
+					{ title: "Our Brands", to: "/brands" },
+					{ title: "Software", to: "/software" },
+					{ title: "Careers", to: "/careers" },
 					{ title: "Contact", to: "/contact" }
 				],
 				[
