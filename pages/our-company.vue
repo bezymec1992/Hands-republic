@@ -177,6 +177,11 @@ export default {
 	background: #e5ce5f;
 	position: relative;
 	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		min-height: 73rem;
+	}
+
 	@include media-breakpoint-down(lg) {
 		background: #f9eca2;
 	}

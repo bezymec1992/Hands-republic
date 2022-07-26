@@ -20,7 +20,7 @@
 		</main-slot>
 		<div class="stand-wrapper">
 			<div class="container">
-				<Stand img="img-03.jpg" img-mob="img-04.jpg" title1="Super charging" title2="business performance" :btn="{ title: up_md ? 'About us' : 'Work together', to: '/' }" text="We champion small businesses in the digital world and have over 1,700 localised experts to help you spread your reach." />
+				<Stand class="style3" img="img-03.jpg" img-mob="img-04.jpg" title1="Super charging" title2="business performance" :btn="{ title: up_md ? 'About us' : 'Work together', to: '/' }" text="We champion small businesses in the digital world and have over 1,700 localised experts to help you spread your reach." />
 			</div>
 		</div>
 		<Marquee>

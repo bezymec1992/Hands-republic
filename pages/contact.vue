@@ -45,6 +45,10 @@ export default {
 	background: $dairy-cream;
 	overflow: hidden;
 
+	@include media-breakpoint-up(md) {
+		min-height: 73rem;
+	}
+
 	@include media-breakpoint-down(md) {
 		padding-top: 4rem;
 	}

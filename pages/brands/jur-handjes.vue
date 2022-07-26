@@ -103,7 +103,7 @@ export default {
 	background: #dd2424;
 	position: relative;
 	overflow: hidden;
-	padding: 50px 0;
+	padding: 29px 0;
 	margin-bottom: 180px;
 	@include media-breakpoint-down(lg) {
 		margin-bottom: 60px;
