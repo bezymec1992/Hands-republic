@@ -145,6 +145,10 @@ export default {
 }
 .marquee {
 	padding-top: 0;
+
+	@include media-breakpoint-down(md) {
+		padding-bottom: 9rem;
+	}
 }
 .wrap {
 	padding-top: 0;

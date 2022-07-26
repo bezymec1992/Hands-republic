@@ -68,6 +68,11 @@ export default {
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 70px 0;
+
+	@include media-breakpoint-down(md) {
+		padding-bottom: 3rem;
+	}
+
 	.wrap__info {
 		padding-left: 80px;
 		@include media-breakpoint-down(lg) {
