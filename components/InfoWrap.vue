@@ -72,7 +72,7 @@ export default {
 	}
 
 	&__img {
-		margin-left: -3rem;
+		margin-left: -3.5rem;
 		margin-bottom: 3.3rem;
 
 		@include media-breakpoint-down(sm) {

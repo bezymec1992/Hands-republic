@@ -147,6 +147,10 @@ export default {
 	}
 
 	&.style3 {
+		@include media-breakpoint-down(md) {
+			padding-top: 1rem;
+		}
+
 		.stand__content-holder {
 			@include media-breakpoint-up(xl) {
 				position: relative;

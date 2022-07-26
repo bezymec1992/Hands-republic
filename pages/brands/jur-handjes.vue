@@ -155,24 +155,27 @@ export default {
 }
 .stand {
 	padding-top: 0;
-	padding-bottom: 20rem;
 	@include media-breakpoint-down(xl) {
 		padding-bottom: 13rem;
 	}
 }
 .benefit {
-	padding-top: 0;
 	padding-bottom: 15rem;
 	@include media-breakpoint-down(xl) {
 		padding-bottom: 4rem;
 	}
+
+	@include media-breakpoint-up(md) {
+		padding-top: 20rem;
+	}
+
 	.benefit__block {
 		border: 0.2rem solid gray;
 		width: 56rem;
 		max-width: 100%;
 		padding: 0 9rem 9.5rem;
 		@include media-breakpoint-down(xl) {
-			margin-bottom: 8.5rem;
+			margin-bottom: 10.5rem;
 		}
 		@include media-breakpoint-down(md) {
 			padding: 0 0 6rem;
