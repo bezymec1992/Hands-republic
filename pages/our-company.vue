@@ -177,6 +177,18 @@ export default {
 	background: #e5ce5f;
 	position: relative;
 	overflow: hidden;
+	.intro__title-wrapp {
+		position: absolute;
+		padding-bottom: 0;
+		margin-top: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		@include media-breakpoint-down(lg) {
+			position: unset;
+			transform: unset;
+			padding-bottom: 60px;
+		}
+	}
 
 	@include media-breakpoint-up(md) {
 		min-height: 73rem;

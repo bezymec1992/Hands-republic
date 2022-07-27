@@ -28,7 +28,7 @@
 						<div class="join__title-wrap col-12 col-xl-6">
 							<h2 class="h2 join__title">Reasons to join Hands Republic</h2>
 							<div class="desk">
-								<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="button" />
+								<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" to="/working-together" />
 							</div>
 						</div>
 						<div class="join__items col-12 col-xl-6">
