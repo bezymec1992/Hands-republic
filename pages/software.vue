@@ -16,7 +16,7 @@
 								Software <br />
 								hands republic
 							</h1>
-							<Button title="Work together" class="btn-dark-outline-title" type="nuxt-link" to="/contact" :has-icon="true" />
+							<Button title="Work together" class="btn-dark-outline-title" type="nuxt-link" to="/working-together" :has-icon="true" />
 						</div>
 					</div>
 				</div>

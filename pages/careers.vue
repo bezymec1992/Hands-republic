@@ -5,7 +5,7 @@
 				<div class="flex-column-reverse flex-lg-row row">
 					<div class="intro__title-wrapp col-12 col-lg-8">
 						<h1 class="h1 intro__title">Be with people who share your passion</h1>
-						<Button title="Find your team" class="btn-dark-outline-title" :has-icon="true" type="button" />
+						<Button title="Find your team" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" to="/contact" />
 					</div>
 					<div class="col-12 col-lg-4">
 						<div class="intro-img">
