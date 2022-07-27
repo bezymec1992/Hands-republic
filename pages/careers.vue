@@ -62,7 +62,7 @@
 							</ul>
 						</div>
 						<div class="mobil">
-							<Button title="Find your team" class="btn-dark" :has-icon="true" type="button" />
+							<Button title="Find your team" class="btn-dark" :has-icon="true" type="nuxt-link" to="/contact" />
 						</div>
 					</div>
 				</div>
