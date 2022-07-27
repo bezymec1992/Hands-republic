@@ -2,7 +2,7 @@
   <div class="wrap-info">
     <div class="container">
       <div class="row g-0">
-        <div class="col-12 col-xxl-7">
+        <div class="col-12 col-md-7">
           <div class="wrap-info__img">
             <picture>
               <source
@@ -20,7 +20,7 @@
             </picture>
           </div>
         </div>
-        <div class="col-12 col-xxl-5 d-flex align-items-center">
+        <div class="col-12 col-md-5 d-flex align-items-center">
           <div class="wrap-info__wrapper">
             <h2 class="h2 wrap-info__title">
               {{ title }}

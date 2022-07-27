@@ -16,7 +16,8 @@
                 title="Visit website"
                 class="btn-white-outline-title"
                 :has-icon="true"
-                type="button"
+                type="nuxt-link"
+                to="/working-together"
               />
             </div>
             <div class="col-12 col-lg-7">
