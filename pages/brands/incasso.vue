@@ -18,8 +18,7 @@
               title="Visit website"
               class="btn-white-outline-title"
               :has-icon="true"
-              type="nuxt-link"
-              to="/working-together"
+              type="button"
             />
           </div>
           <div class="col-12 col-lg-4">
@@ -145,6 +144,11 @@ export default {
   background: $blue-stone;
   position: relative;
   overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    min-height: 73rem;
+  }
+
   .intro__title-wrapp {
     .intro__title {
       color: $white;

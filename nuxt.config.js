@@ -1,12 +1,10 @@
 const isProd = process.env === 'prod';
 const API_URL = isProd ? process.env.API_URL_PROD : process.env.API_URL_DEV;
 
-
 export default {
   publicRuntimeConfig: {
     apiURL: API_URL,
   },
-
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

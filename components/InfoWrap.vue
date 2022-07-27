@@ -91,9 +91,12 @@ export default {
   margin: 0 auto;
   overflow: hidden;
 
+  .container {
+    max-width: 141rem;
+  }
+
   &__img {
-    margin-left: -3rem;
-    margin-right: -3rem;
+    margin-left: -3.5rem;
     margin-bottom: 3.3rem;
 
     @include media-breakpoint-down(sm) {

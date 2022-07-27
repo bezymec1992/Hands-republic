@@ -5,7 +5,7 @@
 				<div class="flex-column-reverse flex-lg-row row">
 					<div class="intro__title-wrapp col-12 col-lg-8">
 						<h1 class="h1 intro__title">Be with people who share your passion</h1>
-						<Button title="Find your team" class="btn-dark-outline-title" :has-icon="true" type="button" />
+						<Button title="Find your team" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" to="/contact" />
 					</div>
 					<div class="col-12 col-lg-4">
 						<div class="intro-img">
@@ -70,14 +70,12 @@
 		</div>
 
 		<block-section :title="block.title" :text="block.text" :img="block.img" :imgMob="block.imgMob">
-		<template #title>
-				Inclusive hiring
-			</template>
+			<template #title> Inclusive hiring </template>
 		</block-section>
 		<Marquee>
 			SHARE <span>YOUR</span> <br class="d-md-none" />
 			PASSION
-    	</Marquee>
+		</Marquee>
 		<contact-section />
 	</div>
 </template>
@@ -88,7 +86,6 @@ import Stand from "@/components/Stand";
 import BlockSection from "@/components/BlockSection";
 import Marquee from "@/components/Marquee";
 import ContactSection from "@/components/ContactSection";
-
 
 export default {
 	components: {
@@ -122,6 +119,10 @@ export default {
 	background: #add9da;
 	position: relative;
 	overflow: hidden;
+	@include media-breakpoint-up(md) {
+		min-height: 73rem;
+	}
+
 	.intro__title-wrapp {
 		width: 55.3rem;
 		max-width: 100%;
@@ -235,10 +236,9 @@ export default {
 			}
 		}
 	}
-	
 }
 
 .block-section {
-		padding-bottom: 0;
-	}
+	padding-bottom: 0;
+}
 </style>

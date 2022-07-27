@@ -16,7 +16,7 @@
 						{{ title2 }}
 					</h2>
 					<Button v-if="btn.title && up_md" :title="btn.title" class="btn-dark" :has-icon="true" type="nuxt-link" :to="btn.to" />
-					<Button v-if="btn.title && !up_md" :title="btn.title" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" :to="btn.to" />
+					<Button v-if="btn.title && !up_md" :title="btn.title" class="btn-dark" :has-icon="true" type="nuxt-link" :to="btn.to" />
 				</div>
 			</div>
 			<div v-if="text" class="stand__text-holder">
@@ -113,7 +113,7 @@ export default {
 	}
 
 	&__text-holder {
-		padding-top: 7.7rem;
+		padding-top: 2.7rem;
 		font-size: 2rem;
 		line-height: 1.9;
 		@include media-breakpoint-up(xl) {
@@ -142,6 +142,19 @@ export default {
 			max-width: 1440px;
 			@include media-breakpoint-up(xl) {
 				padding-left: 0;
+			}
+		}
+	}
+
+	&.style3 {
+		@include media-breakpoint-down(md) {
+			padding-top: 1rem;
+		}
+
+		.stand__content-holder {
+			@include media-breakpoint-up(xl) {
+				position: relative;
+				left: -3.1rem;
 			}
 		}
 	}

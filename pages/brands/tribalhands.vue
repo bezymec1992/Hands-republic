@@ -168,6 +168,11 @@ export default {
   background: $tolopea;
   position: relative;
   overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    min-height: 73rem;
+  }
+
   &::before {
     @include media-breakpoint-down(lg) {
       content: "";
@@ -218,7 +223,7 @@ export default {
     @include media-breakpoint-up(lg) {
       position: absolute;
       height: 100%;
-      width: 133rem;
+      width: 146rem;
       right: 0%;
       bottom: 0;
     }
@@ -242,8 +247,7 @@ export default {
 .map {
   padding-top: 5rem;
   overflow: hidden;
-  margin-left: -2rem;
-  margin-right: -2rem;
+
   @include media-breakpoint-up(md) {
     padding-top: 13.8rem;
   }

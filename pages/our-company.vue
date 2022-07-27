@@ -5,7 +5,7 @@
 				<div class="flex-column-reverse flex-lg-row row">
 					<div class="intro__title-wrapp col-12 col-lg-8">
 						<h1 class="h1 intro__title">Growing your business</h1>
-						<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="button" />
+						<Button title="Work together" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" to="/working-together" />
 					</div>
 					<div class="col-12 col-lg-4">
 						<div class="intro-img">
@@ -52,7 +52,7 @@
 					</h2>
 					<div class="shaping__text-wap col-12 col-xl-6">
 						<p class="shaping__text">Our passionate executive and non-executive board members reflect the entrepreneurial spirit that brought about Heands Republic and remains at the heart of how our business is evolving.</p>
-						<Button title="Find your team" class="btn-dark-outline-title" :has-icon="true" type="button" />
+						<Button title="Find your team" class="btn-dark-outline-title" :has-icon="true" type="nuxt-link" to="/contact" />
 					</div>
 				</div>
 			</div>
@@ -93,20 +93,20 @@ export default {
 			selectProjects: [
 				{
 					title: "Juridische Handjes",
-					to: "/1"
+					to: "/brands/jur-handjes"
 				},
 				{
 					title: "Photograph Hands",
-					to: "/2"
+					to: "/brands/incasso"
 				},
 				{
 					title: "HandsHands",
-					to: "/3"
+					to: "/brands/tribalhands"
 				},
-				{
-					title: "One more hands",
-					to: "/4"
-				}
+				// {
+				// 	title: "One more hands",
+				// 	to: "/4"
+				// }
 			],
 			info: {
 				title: "Our story",
@@ -177,6 +177,11 @@ export default {
 	background: #e5ce5f;
 	position: relative;
 	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		min-height: 73rem;
+	}
+
 	@include media-breakpoint-down(lg) {
 		background: #f9eca2;
 	}
@@ -209,6 +214,14 @@ export default {
 			width: 100%;
 			height: 100%;
 		}
+	}
+}
+.wrap {
+	padding-top: 180px;
+	padding-bottom: 140px;
+	@include media-breakpoint-down(lg) {
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 }
 .hands {
@@ -348,6 +361,10 @@ export default {
 		@include media-breakpoint-up(xl) {
 			@include grid-gutter(4rem);
 		}
+	}
+	padding-bottom: 100px;
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 70px;
 	}
 }
 </style>

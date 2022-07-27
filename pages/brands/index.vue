@@ -95,8 +95,11 @@ export default {
 }
 
 .section-labels-card {
+	padding-top: 10rem;
 	padding-bottom: 10rem;
+
 	@include media-breakpoint-down(lg) {
+		padding-top: 5rem;
 		padding-bottom: 8rem;
 	}
 }
