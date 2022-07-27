@@ -129,6 +129,7 @@ export default {
 		padding-bottom: 0;
 	}
 	@include media-breakpoint-down(lg) {
+		padding-bottom: 4rem;
 		background: #f3f3f3;
 	}
 	.intro-img {
@@ -142,6 +143,7 @@ export default {
 		@include media-breakpoint-down(lg) {
 			margin-left: -2rem;
 			margin-right: -2rem;
+			margin-bottom: -6rem;
 		}
 		img {
 			width: 100%;

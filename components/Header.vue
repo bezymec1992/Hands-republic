@@ -13,7 +13,7 @@
 						</strong>
 					</li>
 					<li v-for="(item, index) in menu" :key="index" @click="menuClose">
-						<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
+						<nuxt-link :to="item.to" exact-active-class="active">{{ item.title }}</nuxt-link>
 					</li>
 				</ul>
 			</nav>
