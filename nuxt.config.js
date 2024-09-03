@@ -5,6 +5,9 @@ export default {
   publicRuntimeConfig: {
     apiURL: API_URL,
   },
+  router: {
+    base: '/Hands-republic/'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
